@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import { config } from './config.js';
 
-function holderIsAlive() {
+function holderIsAlive(lockPath) {
   try {
-    const pid = Number(fs.readFileSync(config.lockPath, 'utf8'));
+    const pid = Number(fs.readFileSync(lockPath, 'utf8'));
     if (!pid) return false;
     process.kill(pid, 0);
     return true;
@@ -13,17 +13,17 @@ function holderIsAlive() {
   }
 }
 
-export function acquireLock() {
+export function acquireLock(lockPath = config.lockPath) {
   try {
-    fs.writeFileSync(config.lockPath, String(process.pid), { flag: 'wx' });
+    fs.writeFileSync(lockPath, String(process.pid), { flag: 'wx' });
   } catch (e) {
     if (e.code !== 'EEXIST') throw e;
-    if (holderIsAlive()) return false;
-    fs.writeFileSync(config.lockPath, String(process.pid));
+    if (holderIsAlive(lockPath)) return false;
+    fs.writeFileSync(lockPath, String(process.pid));
   }
   return true;
 }
 
-export const releaseLock = () => fs.rmSync(config.lockPath, { force: true });
+export const releaseLock = (lockPath = config.lockPath) => fs.rmSync(lockPath, { force: true });
 
-export const syncIsRunning = () => fs.existsSync(config.lockPath) && holderIsAlive();
+export const syncIsRunning = (lockPath = config.lockPath) => fs.existsSync(lockPath) && holderIsAlive(lockPath);

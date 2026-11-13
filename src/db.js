@@ -78,6 +78,17 @@ CREATE INDEX IF NOT EXISTS idx_price_sku ON price_history(sku_id, at);
 CREATE INDEX IF NOT EXISTS idx_stock_sku ON stock_history(sku_id, at);
 `;
 
+// Cada fonte tem as suas tabelas, com as mesmas colunas: a da NCR sem prefixo, as outras com prefixo (ex.: q_products).
+const TABLE_NAMES = /\b(runs|categories|brands|products|skus|product_categories|clusters|product_clusters|stores|price_history|stock_history|events)\b/g;
+export const schemaFor = (prefix) => SCHEMA.replace(TABLE_NAMES, `${prefix}$1`).replace(/\bidx_/g, `${prefix}idx_`);
+
+/** Colunas acrescentadas depois da primeira versão: bases antigas recebem-nas sem perder dados. */
+function migrate(db, prefix) {
+  const cols = new Set(db.prepare(`PRAGMA table_info(${prefix}skus)`).all().map((c) => c.name));
+  // Estado do stock quando a loja não publica a quantidade: in_stock | backorder | out_of_stock.
+  if (!cols.has('availability')) db.exec(`ALTER TABLE ${prefix}skus ADD COLUMN availability TEXT`);
+}
+
 export function openDb({ readonly = false } = {}) {
   if (!readonly) fs.mkdirSync(path.dirname(config.dbPath), { recursive: true });
   const db = new Database(config.dbPath, readonly ? { readonly: true, fileMustExist: true } : {});
@@ -85,11 +96,14 @@ export function openDb({ readonly = false } = {}) {
   if (!readonly) {
     db.pragma('journal_mode = WAL');
     db.pragma('foreign_keys = ON');
-    db.exec(SCHEMA);
-    // Uma execução interrompida (ex.: máquina desligada) não pode ficar "a correr" para sempre.
-    db.prepare(`UPDATE runs SET status='failed', finished_at=?, error='Execução interrompida'
-                WHERE status='running' AND started_at < ?`)
-      .run(new Date().toISOString(), new Date(Date.now() - 3600_000).toISOString());
+    for (const prefix of ['', 'q_']) {
+      db.exec(schemaFor(prefix));
+      migrate(db, prefix);
+      // Uma execução interrompida (ex.: máquina desligada) não pode ficar "a correr" para sempre.
+      db.prepare(`UPDATE ${prefix}runs SET status='failed', finished_at=?, error='Execução interrompida'
+                  WHERE status='running' AND started_at < ?`)
+        .run(new Date().toISOString(), new Date(Date.now() - 3600_000).toISOString());
+    }
   }
   return db;
 }

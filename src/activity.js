@@ -11,13 +11,13 @@ const SNAPSHOT_INTERVAL_MS = 1000; // imagem guardada para quem abrir a página 
  * Observar nunca pode estragar a recolha: qualquer falha de escrita é ignorada.
  */
 export class Activity {
-  constructor({ runId, trigger, live }) {
-    this.dir = config.liveDir;
+  constructor({ runId, trigger, live, dir = config.liveDir, source = 'ncr' }) {
+    this.dir = dir;
     this.file = `${this.dir}/${ACTIVITY_FILE}`;
     this.lastSnapshotAt = 0;
     this.lastFrame = null;
     this.stream = null;
-    const start = this.line('start', `Execução #${runId} iniciada`, { runId, trigger, live });
+    const start = this.line('start', `Execução #${runId} iniciada`, { runId, trigger, live, source });
     try {
       fs.mkdirSync(this.dir, { recursive: true });
       fs.rmSync(`${this.dir}/${FRAME_FILE}`, { force: true });

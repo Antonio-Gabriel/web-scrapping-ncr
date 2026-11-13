@@ -11,7 +11,7 @@ const CHROME_PATHS =['/usr/bin/google-chrome', '/usr/bin/google-chrome-stable', 
 const findChrome = () => process.env.ANDRA_CHROME || CHROME_PATHS.find((p) => fs.existsSync(p));
 
 export class SiteSession {
-  static async open({ log = console.log, activity = nullActivity, live = false } = {}) {
+  static async open({ log = console.log, activity = nullActivity, live = false, baseUrl = config.baseUrl } = {}) {
     const args = process.env.ANDRA_NO_SANDBOX === '1' ? ['--no-sandbox', '--disable-setuid-sandbox'] : [];
     const browser = await puppeteer.launch({ headless: true, args, executablePath: findChrome() });
     try {
@@ -20,13 +20,13 @@ export class SiteSession {
       // O site é pesado: não descarregamos o que não é necessário para extrair dados.
       // Numa execução acompanhada carrega-se tudo, para o ecrã mostrar o site como ele é.
       await page.setRequestInterception(true);
-      const session = new SiteSession(browser, page, log, activity, live);
+      const session = new SiteSession(browser, page, log, activity, live, baseUrl);
       page.on('request', (req) => (session.lightMode && BLOCKED.has(req.resourceType()) ? req.abort() : req.continue()));
       if (live) {
         // Um separador vazio sai preto na transmissão, e o site pode demorar a pintar a primeira imagem.
         await page.setContent('<!doctype html><html style="background:#fff"><body></body></html>');
         await session.startScreencast();
-        await session.hud('A abrir ncrangola.com');
+        await session.hud(`A abrir ${new URL(baseUrl).hostname.replace(/^www\./, '')}`);
       }
       await session.goto('/');
       return session;
@@ -37,8 +37,8 @@ export class SiteSession {
     }
   }
 
-  constructor(browser, page, log, activity = nullActivity, live = false) {
-    this.browser = browser; this.page = page; this.log = log; this.activity = activity; this.live = live;
+  constructor(browser, page, log, activity = nullActivity, live = false, baseUrl = config.baseUrl) {
+    this.browser = browser; this.page = page; this.log = log; this.activity = activity; this.live = live; this.baseUrl = baseUrl;
     this.lightMode = !live;
   }
 
@@ -172,7 +172,7 @@ export class SiteSession {
   }
 
   async goto(pathname, { settle = false } = {}) {
-    const url = new URL(pathname, config.baseUrl).href;
+    const url = new URL(pathname, this.baseUrl).href;
     const started = Date.now();
     this.activity.emit('navigate', `A abrir ${url}`, { url });
     // Numa execução acompanhada carrega-se tudo, o que numa ligação lenta pode passar de um minuto.
@@ -220,7 +220,9 @@ export class SiteSession {
       try {
         const r = await this.page.evaluate(async (url, accept) => {
           const res = await fetch(url, { headers: { accept }, credentials: 'same-origin' });
-          return { status: res.status, resources: res.headers.get('resources'), body: await res.text() };
+          return {
+            status: res.status, resources: res.headers.get('resources'), wpTotal: res.headers.get('x-wp-total'), body: await res.text(),
+          };
         }, pathname, accept);
         this.logRequest('GET', pathname, r.status, started);
         if (r.status === 429 || r.status >= 500) { lastError = new Error(`HTTP ${r.status} em ${pathname}`); continue; }
@@ -237,7 +239,8 @@ export class SiteSession {
   async json(pathname) {
     const r = await this.request(pathname);
     if (r.status < 200 || r.status >= 300) throw new Error(`HTTP ${r.status} em ${pathname}`);
-    const total = r.resources?.split('/')[1];
+    // Total de resultados: VTEX usa "resources: 0-49/1571", o WooCommerce usa "x-wp-total: 4084".
+    const total = r.resources?.split('/')[1] ?? r.wpTotal;
     return { data: JSON.parse(r.body), total: total ? Number(total) : null };
   }
 
@@ -264,4 +267,4 @@ export class SiteSession {
   async close() { await this.browser.close().catch(() => {}); }
 }
 
-export { sleep };
+export { findChrome, sleep };

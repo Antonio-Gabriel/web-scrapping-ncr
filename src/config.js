@@ -21,6 +21,9 @@ export const config = {
   lowStockAt: 5,
   // Só se marcam produtos como removidos se a recolha cobrir pelo menos esta fração do total anterior.
   minCoverageForRemoval: 0.9,
+  // Que Rápido: a API da loja é lenta (8 a 20 s por página), por isso páginas grandes e poucos pedidos.
+  qrPageSize: 100,
+  qrMaxProducts: Number(process.env.ANDRA_QR_MAX_PRODUCTS || 20000),
   // Coordenadas usadas para descobrir pontos de levantamento em Angola.
   storeProbeCoords: [
     ['Luanda', 13.2344, -8.8147], ['Talatona', 13.199, -8.914], ['Benguela', 13.4055, -12.5763],
