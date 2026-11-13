@@ -1,0 +1,11 @@
+<div class="space-y-2.5">
+  {{#each rows}}
+  <a {{#if href}}href="{{href}}"{{/if}} class="group block rounded" data-tip="{{label}}: {{display}}">
+    <span class="flex items-baseline justify-between gap-3 text-[13px]">
+      <span class="truncate text-ink-soft group-hover:text-ink">{{label}}</span>
+      <span class="shrink-0 font-medium tabular-nums">{{display}}</span>
+    </span>
+    <span class="mt-1 block border-l border-line-strong"><span class="bar block" style="width:{{width}}%"></span></span>
+  </a>
+  {{/each}}
+</div>

@@ -1,0 +1,195 @@
+{"at":"2026-11-13T07:00:03.194Z","kind":"start","text":"Execução #87 iniciada","runId":87,"trigger":"cron","live":false}
+{"at":"2026-11-13T07:00:03.196Z","kind":"info","text":"[2026-11-13T07:00:03.191Z] AndraScrapy: execução #87 (cron)"}
+{"at":"2026-11-13T07:00:03.200Z","kind":"phase","text":"A abrir o browser","phase":"browser"}
+{"at":"2026-11-13T07:00:03.688Z","kind":"navigate","text":"A abrir https://www.ncrangola.com/","url":"https://www.ncrangola.com/"}
+{"at":"2026-11-13T07:00:16.495Z","kind":"loaded","text":"Página aberta (HTTP 200, 12.8 s)","url":"https://www.ncrangola.com/"}
+{"at":"2026-11-13T07:00:16.498Z","kind":"phase","text":"A ler as categorias","phase":"categories"}
+{"at":"2026-11-13T07:00:17.500Z","kind":"request","text":"GET /api/catalog_system/pub/category/tree/5","status":200,"ms":1001}
+{"at":"2026-11-13T07:00:17.502Z","kind":"info","text":"categorias: 244"}
+{"at":"2026-11-13T07:00:17.510Z","kind":"phase","text":"A ler os produtos","phase":"products"}
+{"at":"2026-11-13T07:00:19.803Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=0&_to=49","status":206,"ms":2283}
+{"at":"2026-11-13T07:00:19.810Z","kind":"progress","text":"A ler produtos, por exemplo: Papel para Fotocopiadora A4 75grs","phase":"products","done":50,"total":1577}
+{"at":"2026-11-13T07:00:21.553Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=50&_to=99","status":206,"ms":1142}
+{"at":"2026-11-13T07:00:21.561Z","kind":"progress","text":"A ler produtos, por exemplo: Cabo USB-C para LIGHTING 2M QC FAST CHARGING Branco","phase":"products","done":99,"total":1578}
+{"at":"2026-11-13T07:00:23.137Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=100&_to=149","status":206,"ms":967}
+{"at":"2026-11-13T07:00:23.141Z","kind":"progress","text":"A ler produtos, por exemplo: Tinteiro 650 2515/3515  color (cz102ae)","phase":"products","done":149,"total":1578}
+{"at":"2026-11-13T07:00:24.897Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=150&_to=199","status":206,"ms":1149}
+{"at":"2026-11-13T07:00:24.899Z","kind":"progress","text":"A ler produtos, por exemplo: Caixa de Conexão Dome Branco","phase":"products","done":199,"total":1578}
+{"at":"2026-11-13T07:00:26.572Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=200&_to=249","status":206,"ms":1065}
+{"at":"2026-11-13T07:00:26.579Z","kind":"progress","text":"A ler produtos, por exemplo: Toner 222A Magenta LJ3203/3288/Mfp3303/3388 (1.200 PAGS)","phase":"products","done":249,"total":1578}
+{"at":"2026-11-13T07:00:28.199Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=250&_to=299","status":206,"ms":1013}
+{"at":"2026-11-13T07:00:28.203Z","kind":"progress","text":"A ler produtos, por exemplo: Antivírus Plus 1 Utilizador 1 Dispositivo - Esd","phase":"products","done":299,"total":1578}
+{"at":"2026-11-13T07:00:29.838Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=300&_to=349","status":206,"ms":1027}
+{"at":"2026-11-13T07:00:29.843Z","kind":"progress","text":"A ler produtos, por exemplo: Envelope B5 906 Silicone","phase":"products","done":349,"total":1578}
+{"at":"2026-11-13T07:00:31.270Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=350&_to=399","status":206,"ms":818}
+{"at":"2026-11-13T07:00:31.273Z","kind":"progress","text":"A ler produtos, por exemplo: Placa 90CM Vitrocerâmica Série 8 5P","phase":"products","done":399,"total":1578}
+{"at":"2026-11-13T07:00:32.783Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=400&_to=449","status":206,"ms":902}
+{"at":"2026-11-13T07:00:32.787Z","kind":"progress","text":"A ler produtos, por exemplo: Toner 26a M402/M426 Preto (cf226a)","phase":"products","done":449,"total":1578}
+{"at":"2026-11-13T07:00:34.705Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=450&_to=499","status":206,"ms":1308}
+{"at":"2026-11-13T07:00:34.710Z","kind":"progress","text":"A ler produtos, por exemplo: Tablet 11.9\" Mega 2 36GB 256GB Cinza","phase":"products","done":499,"total":1578}
+{"at":"2026-11-13T07:00:36.736Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=500&_to=549","status":206,"ms":1418}
+{"at":"2026-11-13T07:00:36.739Z","kind":"progress","text":"A ler produtos, por exemplo: Toner 503A Ciano 6000 Páginas CP3505/CP3505/CP3505DN/3800/3800N/3800DN","phase":"products","done":549,"total":1578}
+{"at":"2026-11-13T07:00:38.624Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=550&_to=599","status":206,"ms":1277}
+{"at":"2026-11-13T07:00:38.627Z","kind":"progress","text":"A ler produtos, por exemplo: Placa Encastrável a Gás Série 6 60CM Inox","phase":"products","done":599,"total":1578}
+{"at":"2026-11-13T07:00:40.339Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=600&_to=649","status":206,"ms":1102}
+{"at":"2026-11-13T07:00:40.342Z","kind":"progress","text":"A ler produtos, por exemplo: Placa 60CM 4 Queimadores Gás Preto","phase":"products","done":649,"total":1578}
+{"at":"2026-11-13T07:00:42.154Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=650&_to=699","status":206,"ms":1201}
+{"at":"2026-11-13T07:00:42.157Z","kind":"progress","text":"A ler produtos, por exemplo: Caderno Liceal 40Folhas Quadriculado","phase":"products","done":699,"total":1578}
+{"at":"2026-11-13T07:00:44.727Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=700&_to=749","status":206,"ms":1960}
+{"at":"2026-11-13T07:00:44.742Z","kind":"progress","text":"A ler produtos, por exemplo: Ploter Designjet T850 36\" E-PRTR","phase":"products","done":749,"total":1578}
+{"at":"2026-11-13T07:00:46.353Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=750&_to=799","status":206,"ms":1010}
+{"at":"2026-11-13T07:00:46.356Z","kind":"progress","text":"A ler produtos, por exemplo: Post-It Index 5 Cores (Tiras)","phase":"products","done":799,"total":1578}
+{"at":"2026-11-13T07:00:47.901Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=800&_to=849","status":206,"ms":934}
+{"at":"2026-11-13T07:00:47.906Z","kind":"progress","text":"A ler produtos, por exemplo: Adaptador de Corrente USB-C 20W + Earphones Lightning","phase":"products","done":849,"total":1578}
+{"at":"2026-11-13T07:00:49.486Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=850&_to=899","status":206,"ms":969}
+{"at":"2026-11-13T07:00:49.493Z","kind":"progress","text":"A ler produtos, por exemplo: Pilha Moeda SR41SW 1UN 1.55V","phase":"products","done":899,"total":1578}
+{"at":"2026-11-13T07:00:51.346Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=900&_to=949","status":206,"ms":1245}
+{"at":"2026-11-13T07:00:51.349Z","kind":"progress","text":"A ler produtos, por exemplo: Forno Eléctrico Com 7 Funções Ventilado 9106FL","phase":"products","done":949,"total":1578}
+{"at":"2026-11-13T07:00:52.904Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=950&_to=999","status":206,"ms":941}
+{"at":"2026-11-13T07:00:52.908Z","kind":"progress","text":"A ler produtos, por exemplo: Switch 5 Portas Gigabit Desktop Metal","phase":"products","done":999,"total":1578}
+{"at":"2026-11-13T07:00:54.626Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1000&_to=1049","status":206,"ms":1110}
+{"at":"2026-11-13T07:00:54.630Z","kind":"progress","text":"A ler produtos, por exemplo: Adaptador USB-C 3.0 (M) Para USB-A (F)","phase":"products","done":1049,"total":1578}
+{"at":"2026-11-13T07:00:56.408Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1050&_to=1099","status":206,"ms":1165}
+{"at":"2026-11-13T07:00:56.411Z","kind":"progress","text":"A ler produtos, por exemplo: Pilha Moeda PR48WA 13 6 UN 1,45V","phase":"products","done":1099,"total":1578}
+{"at":"2026-11-13T07:00:58.166Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1100&_to=1149","status":206,"ms":1141}
+{"at":"2026-11-13T07:00:58.174Z","kind":"progress","text":"A ler produtos, por exemplo: Lâmpada led inteligente tunable","phase":"products","done":1149,"total":1578}
+{"at":"2026-11-13T07:00:59.624Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1150&_to=1199","status":206,"ms":842}
+{"at":"2026-11-13T07:00:59.627Z","kind":"progress","text":"A ler produtos, por exemplo: Toner 824a cm6040/6015 magenta (cb383a)","phase":"products","done":1199,"total":1578}
+{"at":"2026-11-13T07:01:01.229Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1200&_to=1249","status":206,"ms":990}
+{"at":"2026-11-13T07:01:01.237Z","kind":"progress","text":"A ler produtos, por exemplo: Tapete para rato com apoio - gel azul","phase":"products","done":1249,"total":1578}
+{"at":"2026-11-13T07:01:02.646Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1250&_to=1299","status":206,"ms":801}
+{"at":"2026-11-13T07:01:02.650Z","kind":"progress","text":"A ler produtos, por exemplo: Bolsa Carteira Lovely Kitty","phase":"products","done":1299,"total":1578}
+{"at":"2026-11-13T07:01:03.953Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1300&_to=1349","status":206,"ms":691}
+{"at":"2026-11-13T07:01:03.957Z","kind":"progress","text":"A ler produtos, por exemplo: Bloco de Apontamento A4 60/100f Belém Liso","phase":"products","done":1349,"total":1578}
+{"at":"2026-11-13T07:01:05.600Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1350&_to=1399","status":206,"ms":1032}
+{"at":"2026-11-13T07:01:05.603Z","kind":"progress","text":"A ler produtos, por exemplo: Colunas SW-2.1 350 15W 220V preto","phase":"products","done":1399,"total":1578}
+{"at":"2026-11-13T07:01:07.650Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1400&_to=1449","status":206,"ms":1434}
+{"at":"2026-11-13T07:01:07.656Z","kind":"progress","text":"A ler produtos, por exemplo: Cabo de Fibra Óptica Patch LC/ST 1M Multimodo 62.5/125 OM2","phase":"products","done":1449,"total":1578}
+{"at":"2026-11-13T07:01:10.824Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1450&_to=1499","status":206,"ms":2559}
+{"at":"2026-11-13T07:01:10.830Z","kind":"progress","text":"A ler produtos, por exemplo: Docking station com carregador wireless (8 em1) usb-c (f)  3x usb-a  card reader 10w","phase":"products","done":1499,"total":1578}
+{"at":"2026-11-13T07:01:12.368Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1500&_to=1549","status":206,"ms":927}
+{"at":"2026-11-13T07:01:12.371Z","kind":"progress","text":"A ler produtos, por exemplo: Capa Silicone Tranparente S21","phase":"products","done":1549,"total":1578}
+{"at":"2026-11-13T07:01:13.469Z","kind":"request","text":"GET /api/catalog_system/pub/products/search?_from=1550&_to=1599","status":200,"ms":487}
+{"at":"2026-11-13T07:01:13.473Z","kind":"progress","text":"A ler produtos, por exemplo: Toner 128A Cp1525/1415 Ciano (Ce321a)","phase":"products","done":1577,"total":1578}
+{"at":"2026-11-13T07:01:13.595Z","kind":"request","text":"GET /sitemap/product-0.xml","status":200,"ms":113}
+{"at":"2026-11-13T07:01:13.690Z","kind":"request","text":"GET /sitemap/product-1.xml","status":200,"ms":85}
+{"at":"2026-11-13T07:01:14.095Z","kind":"request","text":"GET /sitemap/product-2.xml","status":404,"ms":403}
+{"at":"2026-11-13T07:01:14.575Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/garantia/p","status":200,"ms":478}
+{"at":"2026-11-13T07:01:15.668Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/to-213a-amarelo-lj-ent-5700-5800-6700-6701-6800-68","status":200,"ms":491}
+{"at":"2026-11-13T07:01:16.758Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/to-hp-213a-ciano-lj-ent-5700-5800-6700-6701-6800-6","status":200,"ms":488}
+{"at":"2026-11-13T07:01:17.859Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/toner-213a-magenta-lj-ent-5700-5800-6700-6701-6800","status":200,"ms":501}
+{"at":"2026-11-13T07:01:19.246Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/disco-sata-para-servidor-1tb-6g-72k-35in/p","status":200,"ms":786}
+{"at":"2026-11-13T07:01:20.322Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/impressora-laserjet-mfp-mono-4103dw-40ppm/p","status":200,"ms":475}
+{"at":"2026-11-13T07:01:21.456Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/toner-201a-m252m277-preto-cf400a/p","status":200,"ms":532}
+{"at":"2026-11-13T07:01:22.544Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/tapete-para-rato-com-apoio-preto/p","status":200,"ms":486}
+{"at":"2026-11-13T07:01:23.641Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/cabo-hdmi-soho-high-speed-com-ethernet-1m/p","status":200,"ms":496}
+{"at":"2026-11-13T07:01:24.557Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/computador-desktop-all-in-one-23-8-fhd-n100-8gb-25","status":200,"ms":315}
+{"at":"2026-11-13T07:01:25.689Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/rato-sem-fio-2-4g-entry-branco/p","status":200,"ms":531}
+{"at":"2026-11-13T07:01:27.074Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/rato-com-fio-usb-dx-120-preto/p","status":200,"ms":783}
+{"at":"2026-11-13T07:01:28.161Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/impressora-laserjet-mfp-mono-m528dn-43/p","status":200,"ms":485}
+{"at":"2026-11-13T07:01:29.328Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/escova-mi-robot/p","status":200,"ms":566}
+{"at":"2026-11-13T07:01:30.565Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/pos-15-n97-8g-128ssd-preto-wf-usb-rs232-rj45-hdmi-","status":200,"ms":636}
+{"at":"2026-11-13T07:01:31.545Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/cartao-de-memoria-512gb-cl10-gen3/p","status":200,"ms":379}
+{"at":"2026-11-13T07:01:32.690Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/auscultadores-hs-usb-cloud-iii-gaming-preto-vermel","status":200,"ms":543}
+{"at":"2026-11-13T07:01:33.818Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/fritadeira-sem-oleo-air-fryer-8l-preto/p","status":200,"ms":527}
+{"at":"2026-11-13T07:01:34.790Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/computador-desktop-all-in-one-27-fhd-u5-225u-16gb-","status":200,"ms":371}
+{"at":"2026-11-13T07:01:35.749Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/auscultadores-earpods-com-connector-lightning/p","status":200,"ms":354}
+{"at":"2026-11-13T07:01:36.721Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/switch-8-portas-10-100-sem-gestao/p","status":200,"ms":371}
+{"at":"2026-11-13T07:01:37.865Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/suporte-tv-37-a-70-ajustavel-para-teto-360o/p","status":200,"ms":540}
+{"at":"2026-11-13T07:01:39.318Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/rato-sem-fio-2-4-ghz-bluetooth-nx-8080s-ergo-silen","status":200,"ms":848}
+{"at":"2026-11-13T07:01:40.501Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/mochila-15-6-thinkpad-essential-plus-eco/p","status":200,"ms":578}
+{"at":"2026-11-13T07:01:41.701Z","kind":"request","text":"GET /api/catalog_system/pub/products/search/teclado-rato-multimedia-wirless-dongle-usb-pt-pret","status":200,"ms":599}
+{"at":"2026-11-13T07:01:42.301Z","kind":"info","text":"sitemap: 25 em falta, 1 recuperados"}
+{"at":"2026-11-13T07:01:42.357Z","kind":"info","text":"produtos: 1578 (site anuncia 1578, completo)"}
+{"at":"2026-11-13T07:01:42.357Z","kind":"phase","text":"A confirmar o stock real","phase":"stock"}
+{"at":"2026-11-13T07:01:43.576Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1205}
+{"at":"2026-11-13T07:01:43.581Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":50,"total":1578}
+{"at":"2026-11-13T07:01:45.726Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1529}
+{"at":"2026-11-13T07:01:45.731Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":100,"total":1578}
+{"at":"2026-11-13T07:01:47.460Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1111}
+{"at":"2026-11-13T07:01:47.461Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":150,"total":1578}
+{"at":"2026-11-13T07:01:49.718Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1629}
+{"at":"2026-11-13T07:01:49.719Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":200,"total":1578}
+{"at":"2026-11-13T07:01:52.036Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1695}
+{"at":"2026-11-13T07:01:52.038Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":250,"total":1578}
+{"at":"2026-11-13T07:01:54.311Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1650}
+{"at":"2026-11-13T07:01:54.312Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":300,"total":1578}
+{"at":"2026-11-13T07:01:56.636Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1704}
+{"at":"2026-11-13T07:01:56.641Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":350,"total":1578}
+{"at":"2026-11-13T07:01:58.809Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1548}
+{"at":"2026-11-13T07:01:58.810Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":400,"total":1578}
+{"at":"2026-11-13T07:02:00.910Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1473}
+{"at":"2026-11-13T07:02:00.911Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":450,"total":1578}
+{"at":"2026-11-13T07:02:03.393Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1858}
+{"at":"2026-11-13T07:02:03.394Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":500,"total":1578}
+{"at":"2026-11-13T07:02:05.861Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1841}
+{"at":"2026-11-13T07:02:05.862Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":550,"total":1578}
+{"at":"2026-11-13T07:02:08.097Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1608}
+{"at":"2026-11-13T07:02:08.098Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":600,"total":1578}
+{"at":"2026-11-13T07:02:10.398Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1678}
+{"at":"2026-11-13T07:02:10.399Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":650,"total":1578}
+{"at":"2026-11-13T07:02:12.598Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1572}
+{"at":"2026-11-13T07:02:12.599Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":700,"total":1578}
+{"at":"2026-11-13T07:02:15.084Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1858}
+{"at":"2026-11-13T07:02:15.085Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":750,"total":1578}
+{"at":"2026-11-13T07:02:17.558Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1848}
+{"at":"2026-11-13T07:02:17.559Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":800,"total":1578}
+{"at":"2026-11-13T07:02:20.029Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1846}
+{"at":"2026-11-13T07:02:20.034Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":850,"total":1578}
+{"at":"2026-11-13T07:02:21.667Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1008}
+{"at":"2026-11-13T07:02:21.668Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":900,"total":1578}
+{"at":"2026-11-13T07:02:22.887Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":596}
+{"at":"2026-11-13T07:02:22.888Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":950,"total":1578}
+{"at":"2026-11-13T07:02:25.321Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1808}
+{"at":"2026-11-13T07:02:25.322Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1000,"total":1578}
+{"at":"2026-11-13T07:02:28.052Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":2101}
+{"at":"2026-11-13T07:02:28.057Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1050,"total":1578}
+{"at":"2026-11-13T07:02:30.578Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1896}
+{"at":"2026-11-13T07:02:30.579Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1100,"total":1578}
+{"at":"2026-11-13T07:02:32.766Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1561}
+{"at":"2026-11-13T07:02:32.767Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1150,"total":1578}
+{"at":"2026-11-13T07:02:35.189Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1795}
+{"at":"2026-11-13T07:02:35.190Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1200,"total":1578}
+{"at":"2026-11-13T07:02:37.427Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1608}
+{"at":"2026-11-13T07:02:37.432Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1250,"total":1578}
+{"at":"2026-11-13T07:02:39.609Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1555}
+{"at":"2026-11-13T07:02:39.610Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1300,"total":1578}
+{"at":"2026-11-13T07:02:41.784Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1551}
+{"at":"2026-11-13T07:02:41.785Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1350,"total":1578}
+{"at":"2026-11-13T07:02:43.927Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1517}
+{"at":"2026-11-13T07:02:43.928Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1400,"total":1578}
+{"at":"2026-11-13T07:02:46.119Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1561}
+{"at":"2026-11-13T07:02:46.120Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1450,"total":1578}
+{"at":"2026-11-13T07:02:48.591Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1844}
+{"at":"2026-11-13T07:02:48.591Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1500,"total":1578}
+{"at":"2026-11-13T07:02:50.829Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1625}
+{"at":"2026-11-13T07:02:50.831Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1550,"total":1578}
+{"at":"2026-11-13T07:02:52.655Z","kind":"request","text":"POST /api/checkout/pub/orderForms/simulation?sc=1","status":200,"ms":1198}
+{"at":"2026-11-13T07:02:52.656Z","kind":"progress","text":"A confirmar o stock real","phase":"stock","done":1578,"total":1578}
+{"at":"2026-11-13T07:02:53.281Z","kind":"info","text":"stock real lido para 1578/1578 SKUs"}
+{"at":"2026-11-13T07:02:53.281Z","kind":"phase","text":"A ler as lojas","phase":"stores"}
+{"at":"2026-11-13T07:02:53.294Z","kind":"navigate","text":"A abrir https://www.ncrangola.com/nossas-lojas","url":"https://www.ncrangola.com/nossas-lojas"}
+{"at":"2026-11-13T07:02:59.310Z","kind":"loaded","text":"Página aberta (6.0 s)","url":"https://www.ncrangola.com/nossas-lojas"}
+{"at":"2026-11-13T07:02:59.339Z","kind":"click","text":"Clicou em \"NCR 1º Congresso\"","x":278,"y":303}
+{"at":"2026-11-13T07:02:59.873Z","kind":"click","text":"Clicou em \"NCR Combatentes\"","x":278,"y":529}
+{"at":"2026-11-13T07:03:00.436Z","kind":"click","text":"Clicou em \"NCR Express Cabinda\"","x":278,"y":615}
+{"at":"2026-11-13T07:03:00.981Z","kind":"click","text":"Clicou em \"NCR Maculusso\"","x":278,"y":681}
+{"at":"2026-11-13T07:03:01.517Z","kind":"click","text":"Clicou em \"NCR Rainha Ginga\"","x":278,"y":777}
+{"at":"2026-11-13T07:03:02.053Z","kind":"click","text":"Clicou em \"NCR Talatona\"","x":278,"y":853}
+{"at":"2026-11-13T07:03:02.596Z","kind":"click","text":"Clicou em \"Bosch by NCR\"","x":278,"y":862}
+{"at":"2026-11-13T07:03:03.158Z","kind":"click","text":"Clicou em \"NCR Energias Renováveis\"","x":278,"y":450}
+{"at":"2026-11-13T07:03:03.708Z","kind":"navigate","text":"A abrir https://www.ncrangola.com/","url":"https://www.ncrangola.com/"}
+{"at":"2026-11-13T07:03:03.911Z","kind":"loaded","text":"Página aberta (0.2 s)","url":"https://www.ncrangola.com/"}
+{"at":"2026-11-13T07:03:04.843Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=13.2344;-8.8147","status":200,"ms":931}
+{"at":"2026-11-13T07:03:06.564Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=13.199;-8.914","status":200,"ms":1115}
+{"at":"2026-11-13T07:03:08.046Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=13.4055;-12.5763","status":200,"ms":881}
+{"at":"2026-11-13T07:03:09.752Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=13.4925;-14.9177","status":200,"ms":1105}
+{"at":"2026-11-13T07:03:11.458Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=15.7392;-12.7761","status":200,"ms":1105}
+{"at":"2026-11-13T07:03:12.929Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=12.2;-5.55","status":200,"ms":870}
+{"at":"2026-11-13T07:03:13.886Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=16.3416;-9.5402","status":200,"ms":356}
+{"at":"2026-11-13T07:03:15.616Z","kind":"request","text":"GET /api/checkout/pub/pickup-points?geoCoordinates=12.3686;-6.1349","status":200,"ms":1129}
+{"at":"2026-11-13T07:03:16.218Z","kind":"info","text":"lojas: 9"}
+{"at":"2026-11-13T07:03:16.218Z","kind":"phase","text":"A comparar e a guardar","phase":"save"}
+{"at":"2026-11-13T07:03:16.408Z","kind":"info","text":"alterações: novos=1 removidos=12 preços=22 stock=143 promoções=0"}
+{"at":"2026-11-13T07:03:16.408Z","kind":"info","text":"concluído em 193s"}
+{"at":"2026-11-13T07:03:16.422Z","kind":"done","text":"Concluída em 193 s: 1 novos, 12 removidos, 22 preços, 143 stock, 0 promoções","status":"success"}

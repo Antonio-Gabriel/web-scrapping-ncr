@@ -1,0 +1,17 @@
+{{#> header heading="Execuções" sub="Cada sincronização com o site, manual ou automática."}}
+  <div class="flex flex-wrap gap-2">
+    <a class="btn" href="/execucoes/ao-vivo">{{icon "eye"}} Acompanhar ao vivo</a>
+    <form method="post" action="/execucoes/iniciar">
+      <button class="btn btn-primary" {{#if running}}disabled{{/if}}>{{icon "play"}} {{#if running}}A decorrer…{{else}}Rodar agora{{/if}}</button>
+    </form>
+  </div>
+{{/header}}
+<div class="card overflow-hidden"><div class="overflow-x-auto"><table class="data-table">
+  <thead><tr><th>#</th><th>Início</th><th>Origem</th><th>Estado</th><th class="num">Duração</th><th class="num">Produtos</th><th class="num">Novos</th><th class="num">Removidos</th><th class="num">Preços</th><th class="num">Stock</th><th class="num">Promoções</th></tr></thead>
+  <tbody>{{#each runs}}<tr>
+    <td class="tabular-nums text-ink-mute">{{id}}</td><td class="whitespace-nowrap">{{date started_at}}</td>
+    <td>{{#if (eq trigger "cron")}}Automática{{else}}Manual{{/if}}{{#if is_baseline}} · carga inicial{{/if}}</td>
+    <td>{{#if (eq status "success")}}<span class="chip tone-good">Concluída</span>{{else if (eq status "partial")}}<span class="chip tone-warning">Parcial</span>{{else if (eq status "failed")}}<span class="chip tone-critical" title="{{error}}">Falhou</span>{{else}}<span class="chip tone-info">A decorrer</span>{{/if}}{{#if error}}<p class="mt-1 max-w-xs truncate text-xs text-ink-mute" title="{{error}}">{{error}}</p>{{/if}}</td>
+    <td class="num">{{#if seconds}}{{seconds}} s{{else}}—{{/if}}</td><td class="num">{{num products_seen}}</td><td class="num">{{num new_products}}</td><td class="num">{{num removed_products}}</td><td class="num">{{num price_changes}}</td><td class="num">{{num stock_changes}}</td><td class="num">{{num promo_changes}}</td>
+  </tr>{{/each}}</tbody>
+</table></div></div>

@@ -1,0 +1,1199 @@
+[2026-11-03T19:22:24.565Z] AndraScrapy: execução #2 (cron)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 249s
+[2026-11-03T20:00:01.168Z] AndraScrapy: execução #5 (cron)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 226s
+[2026-11-03T21:00:01.728Z] AndraScrapy: execução #12 (cron)
+  categorias: 244
+  catálogo: 50/1575 produtos
+  catálogo: 300/1575 produtos
+  catálogo: 550/1575 produtos
+  catálogo: 800/1575 produtos
+  catálogo: 1050/1575 produtos
+  catálogo: 1300/1575 produtos
+  catálogo: 1550/1575 produtos
+  sitemap: 20 em falta, 0 recuperados
+  produtos: 1575 (site anuncia 1575, completo)
+  stock real lido para 1575/1575 SKUs
+  lojas: 9
+  alterações: novos=8 removidos=4 preços=0 stock=1 promoções=0
+  concluído em 206s
+[2026-11-04T07:00:01.500Z] AndraScrapy: execução #13 (cron)
+  categorias: 244
+  catálogo: 50/1574 produtos
+  catálogo: 300/1574 produtos
+  catálogo: 550/1574 produtos
+  catálogo: 800/1574 produtos
+  catálogo: 1050/1574 produtos
+  catálogo: 1300/1574 produtos
+  catálogo: 1550/1574 produtos
+  sitemap: 21 em falta, 0 recuperados
+  produtos: 1574 (site anuncia 1574, completo)
+  stock real lido para 1574/1574 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=2 promoções=0
+  concluído em 196s
+[2026-11-04T10:00:01.625Z] AndraScrapy: execução #14 (cron)
+[2026-11-04T10:00:47.522Z] ERRO: Error: net::ERR_NAME_NOT_RESOLVED at https://www.ncrangola.com/
+    at navigate (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:191:27)
+    at async Deferred.race (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:33:20)
+    at async CdpFrame.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:153:25)
+    at async CdpPage.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:582:20)
+    at async SiteSession.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:189:17)
+    at async SiteSession.open (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:31:7)
+    at async runSync (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/sync.js:183:15)
+[2026-11-04T20:00:01.854Z] AndraScrapy: execução #15 (cron)
+  categorias: 244
+  catálogo: 50/1574 produtos
+  catálogo: 300/1574 produtos
+  catálogo: 550/1574 produtos
+  catálogo: 800/1574 produtos
+  catálogo: 1050/1574 produtos
+  catálogo: 1300/1574 produtos
+  catálogo: 1550/1574 produtos
+  sitemap: 7 em falta, 0 recuperados
+  produtos: 1574 (site anuncia 1574, completo)
+  stock real lido para 1574/1574 SKUs
+  lojas: 9
+  alterações: novos=10 removidos=11 preços=0 stock=62 promoções=0
+  concluído em 282s
+[2026-11-04T21:00:04.986Z] AndraScrapy: execução #16 (cron)
+  categorias: 244
+  catálogo: 50/1574 produtos
+  catálogo: 300/1574 produtos
+  catálogo: 550/1574 produtos
+  catálogo: 800/1574 produtos
+  catálogo: 1050/1574 produtos
+  catálogo: 1300/1574 produtos
+  catálogo: 1550/1574 produtos
+  sitemap: 7 em falta, 0 recuperados
+  produtos: 1574 (site anuncia 1574, completo)
+  stock real lido para 1574/1574 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=17 stock=49 promoções=0
+  concluído em 202s
+[2026-11-04T22:00:01.620Z] AndraScrapy: execução #17 (cron)
+  categorias: 244
+  catálogo: 50/1581 produtos
+  catálogo: 300/1581 produtos
+  catálogo: 550/1581 produtos
+  catálogo: 800/1581 produtos
+  catálogo: 1050/1581 produtos
+  catálogo: 1300/1581 produtos
+  catálogo: 1550/1581 produtos
+  sitemap: 12 em falta, 0 recuperados
+  produtos: 1581 (site anuncia 1581, completo)
+  stock real lido para 1581/1581 SKUs
+  lojas: 9
+  alterações: novos=12 removidos=5 preços=0 stock=0 promoções=0
+  concluído em 204s
+[2026-11-04T23:00:01.503Z] AndraScrapy: execução #18 (cron)
+  categorias: 244
+  catálogo: 50/1581 produtos
+  catálogo: 300/1581 produtos
+  catálogo: 550/1581 produtos
+  catálogo: 800/1581 produtos
+  catálogo: 1050/1581 produtos
+  catálogo: 1300/1581 produtos
+  catálogo: 1550/1581 produtos
+  sitemap: 12 em falta, 0 recuperados
+  produtos: 1581 (site anuncia 1581, completo)
+  stock real lido para 1581/1581 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 272s
+[2026-11-05T00:00:01.489Z] AndraScrapy: execução #19 (cron)
+  categorias: 244
+  catálogo: 50/1581 produtos
+  catálogo: 300/1581 produtos
+  catálogo: 550/1581 produtos
+  catálogo: 800/1581 produtos
+  catálogo: 1050/1581 produtos
+  catálogo: 1300/1581 produtos
+  catálogo: 1550/1581 produtos
+  sitemap: 12 em falta, 0 recuperados
+  produtos: 1581 (site anuncia 1581, completo)
+  stock real lido para 1581/1581 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 216s
+[2026-11-05T01:00:01.572Z] AndraScrapy: execução #20 (cron)
+  categorias: 244
+  catálogo: 50/1581 produtos
+  catálogo: 300/1581 produtos
+  catálogo: 550/1581 produtos
+  catálogo: 800/1581 produtos
+  catálogo: 1050/1581 produtos
+  catálogo: 1300/1581 produtos
+  catálogo: 1550/1581 produtos
+  sitemap: 12 em falta, 0 recuperados
+  produtos: 1581 (site anuncia 1581, completo)
+  stock real lido para 1581/1581 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 194s
+[2026-11-05T02:00:01.472Z] AndraScrapy: execução #21 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=0 promoções=0
+  concluído em 210s
+[2026-11-05T03:00:01.397Z] AndraScrapy: execução #22 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 197s
+[2026-11-05T04:00:01.754Z] AndraScrapy: execução #23 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 211s
+[2026-11-05T05:00:01.588Z] AndraScrapy: execução #24 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 198s
+[2026-11-05T06:00:03.726Z] AndraScrapy: execução #25 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 196s
+[2026-11-05T07:00:01.620Z] AndraScrapy: execução #26 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=2 promoções=0
+  concluído em 178s
+[2026-11-05T08:00:01.973Z] AndraScrapy: execução #27 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=3 promoções=0
+  concluído em 212s
+[2026-11-05T09:00:01.402Z] AndraScrapy: execução #28 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=8 promoções=0
+  concluído em 192s
+[2026-11-05T10:00:02.062Z] AndraScrapy: execução #29 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 550/1580 produtos
+  catálogo: 800/1580 produtos
+  catálogo: 1050/1580 produtos
+  catálogo: 1300/1580 produtos
+  catálogo: 1550/1580 produtos
+  sitemap: 14 em falta, 0 recuperados
+  produtos: 1580 (site anuncia 1580, completo)
+  stock real lido para 1580/1580 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=1 preços=0 stock=9 promoções=0
+  concluído em 206s
+[2026-11-05T11:00:02.738Z] AndraScrapy: execução #30 (cron)
+  categorias: 244
+  catálogo: 50/1580 produtos
+  catálogo: 300/1580 produtos
+  catálogo: 549/1582 produtos
+  catálogo: 799/1582 produtos
+  catálogo: 1047/1582 produtos
+  catálogo: 1295/1582 produtos
+  catálogo: 1543/1580 produtos
+  sitemap: 21 em falta, 8 recuperados
+  produtos: 1581 (site anuncia 1580, completo)
+  stock real lido para 1581/1581 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=1 preços=0 stock=3 promoções=0
+  concluído em 221s
+[2026-11-05T12:00:01.510Z] AndraScrapy: execução #31 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 300/1582 produtos
+  catálogo: 550/1582 produtos
+  catálogo: 800/1582 produtos
+  catálogo: 1050/1582 produtos
+  catálogo: 1300/1582 produtos
+  catálogo: 1550/1582 produtos
+  sitemap: 14 em falta, 0 recuperados
+  produtos: 1582 (site anuncia 1582, completo)
+  stock real lido para 1582/1582 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=6 promoções=0
+  concluído em 217s
+[2026-11-05T13:00:01.724Z] AndraScrapy: execução #32 (cron)
+  categorias: 244
+  catálogo: 50/1584 produtos
+  catálogo: 300/1584 produtos
+  catálogo: 550/1584 produtos
+  catálogo: 800/1584 produtos
+  catálogo: 1050/1584 produtos
+  catálogo: 1300/1584 produtos
+  catálogo: 1550/1584 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1584 (site anuncia 1584, completo)
+  stock real lido para 1584/1584 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=0 preços=0 stock=3 promoções=0
+  concluído em 184s
+[2026-11-05T14:00:02.130Z] AndraScrapy: execução #33 (cron)
+  categorias: 244
+  catálogo: 50/1584 produtos
+  catálogo: 300/1584 produtos
+  catálogo: 550/1584 produtos
+  catálogo: 800/1584 produtos
+  catálogo: 1050/1584 produtos
+  catálogo: 1300/1584 produtos
+  catálogo: 1550/1584 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1584 (site anuncia 1584, completo)
+  stock real lido para 1584/1584 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=16 promoções=0
+  concluído em 189s
+[2026-11-05T15:00:04.419Z] AndraScrapy: execução #34 (cron)
+  categorias: 244
+  catálogo: 50/1584 produtos
+  catálogo: 300/1584 produtos
+  catálogo: 550/1584 produtos
+  catálogo: 800/1584 produtos
+  catálogo: 1050/1584 produtos
+  catálogo: 1300/1584 produtos
+  catálogo: 1550/1584 produtos
+  sitemap: 14 em falta, 0 recuperados
+  produtos: 1584 (site anuncia 1584, completo)
+  stock real lido para 1584/1584 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=13 promoções=0
+  concluído em 203s
+[2026-11-05T16:00:01.352Z] AndraScrapy: execução #35 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 15 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=3 removidos=1 preços=0 stock=9 promoções=0
+  concluído em 181s
+[2026-11-05T17:00:02.152Z] AndraScrapy: execução #36 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 299/1582 produtos
+  catálogo: 546/1583 produtos
+  catálogo: 795/1582 produtos
+  catálogo: 1043/1583 produtos
+  catálogo: 1289/1583 produtos
+  catálogo: 1538/1582 produtos
+  sitemap: 31 em falta, 12 recuperados
+  produtos: 1582 (site anuncia 1582, completo)
+  stock real lido para 1582/1582 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=4 preços=0 stock=1 promoções=0
+  concluído em 202s
+[2026-11-05T18:00:01.731Z] AndraScrapy: execução #37 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 300/1582 produtos
+  catálogo: 550/1582 produtos
+  catálogo: 800/1582 produtos
+  catálogo: 1050/1582 produtos
+  catálogo: 1300/1582 produtos
+  catálogo: 1550/1582 produtos
+  sitemap: 19 em falta, 0 recuperados
+  produtos: 1582 (site anuncia 1582, completo)
+  stock real lido para 1582/1582 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 181s
+[2026-11-05T19:00:01.496Z] AndraScrapy: execução #38 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 300/1582 produtos
+  catálogo: 550/1582 produtos
+  catálogo: 800/1582 produtos
+  catálogo: 1050/1582 produtos
+  catálogo: 1300/1582 produtos
+  catálogo: 1550/1582 produtos
+  sitemap: 19 em falta, 0 recuperados
+  produtos: 1582 (site anuncia 1582, completo)
+  stock real lido para 1582/1582 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 225s
+[2026-11-05T21:00:01.383Z] AndraScrapy: execução #39 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 300/1582 produtos
+  catálogo: 550/1582 produtos
+  catálogo: 800/1582 produtos
+  catálogo: 1050/1582 produtos
+  catálogo: 1300/1582 produtos
+  catálogo: 1550/1582 produtos
+  sitemap: 14 em falta, 0 recuperados
+  produtos: 1582 (site anuncia 1582, completo)
+  stock real lido para 1582/1582 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=77 promoções=0
+  concluído em 230s
+[2026-11-06T10:00:04.650Z] AndraScrapy: execução #40 (cron)
+  categorias: 244
+  catálogo: 50/1604 produtos
+  catálogo: 299/1605 produtos
+  catálogo: 549/1604 produtos
+  catálogo: 798/1604 produtos
+  catálogo: 1046/1605 produtos
+  catálogo: 1296/1604 produtos
+  catálogo: 1545/1604 produtos
+  sitemap: 16 em falta, 5 recuperados
+  produtos: 1604 (site anuncia 1605, parcial)
+  stock real lido para 1604/1604 SKUs
+  lojas: 9
+  alterações: novos=24 removidos=0 preços=0 stock=16 promoções=0
+  concluído em 209s
+[2026-11-06T15:00:04.199Z] AndraScrapy: execução #41 (cron)
+  categorias: 244
+  catálogo: 50/1604 produtos
+  catálogo: 299/1605 produtos
+  catálogo: 549/1604 produtos
+  catálogo: 798/1604 produtos
+  catálogo: 1046/1605 produtos
+  catálogo: 1296/1604 produtos
+  catálogo: 1545/1604 produtos
+  sitemap: 16 em falta, 5 recuperados
+  produtos: 1604 (site anuncia 1605, parcial)
+  stock real lido para 1604/1604 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=34 promoções=0
+  concluído em 192s
+[2026-11-06T16:00:02.130Z] AndraScrapy: execução #42 (cron)
+  categorias: 244
+  catálogo: 50/1605 produtos
+  catálogo: 300/1606 produtos
+  catálogo: 550/1605 produtos
+  catálogo: 799/1606 produtos
+  catálogo: 1049/1605 produtos
+  catálogo: 1297/1606 produtos
+  catálogo: 1546/1605 produtos
+  sitemap: 18 em falta, 4 recuperados
+  produtos: 1605 (site anuncia 1606, parcial)
+  stock real lido para 1605/1605 SKUs
+  lojas: 9
+  alterações: novos=2 removidos=0 preços=1 stock=75 promoções=0
+  concluído em 220s
+[2026-11-06T17:00:01.920Z] AndraScrapy: execução #43 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 22 em falta, 1 recuperados
+  produtos: 1591 (site anuncia 1590, completo)
+  stock real lido para 1591/1591 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=22 preços=0 stock=1 promoções=0
+  concluído em 193s
+[2026-11-06T18:00:02.719Z] AndraScrapy: execução #44 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 22 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=2 promoções=0
+  concluído em 217s
+[2026-11-06T19:00:02.183Z] AndraScrapy: execução #45 (cron)
+[2026-11-06T19:00:48.173Z] ERRO: Error: net::ERR_INTERNET_DISCONNECTED at https://www.ncrangola.com/
+    at navigate (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:191:27)
+    at async Deferred.race (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:33:20)
+    at async CdpFrame.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:153:25)
+    at async CdpPage.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:582:20)
+    at async SiteSession.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:189:17)
+    at async SiteSession.open (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:31:7)
+    at async runSync (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/sync.js:183:15)
+[2026-11-06T20:00:02.211Z] AndraScrapy: execução #46 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 22 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 219s
+[2026-11-08T06:00:01.950Z] AndraScrapy: execução #47 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 7 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=3 removidos=5 preços=0 stock=35 promoções=0
+  concluído em 326s
+[2026-11-08T15:00:01.456Z] AndraScrapy: execução #48 (cron)
+  categorias: 244
+  catálogo: 50/1589 produtos
+  catálogo: 300/1589 produtos
+  catálogo: 550/1589 produtos
+  catálogo: 800/1589 produtos
+  catálogo: 1050/1589 produtos
+  catálogo: 1300/1589 produtos
+  catálogo: 1550/1589 produtos
+  aviso: cabo-rede-cat6a-3m-utp-cinza: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: trolley-mochila-dogs-radicais-com-lancheira-e-estojo-azul: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: rato-com-fio-usb-1000-preto: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  sitemap: 9 em falta, 0 recuperados
+  produtos: 1589 (site anuncia 1589, completo)
+  aviso: stock do lote 0: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 50: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 100: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 150: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 200: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 250: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 300: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 350: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 400: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 450: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 500: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 550: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 600: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 650: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 700: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 750: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 800: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 850: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 900: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 950: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1000: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1050: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1100: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1150: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1200: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1250: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1300: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1350: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1400: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1450: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1500: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: stock do lote 1550: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  stock real lido para 0/1589 SKUs
+  aviso: lojas físicas indisponíveis (Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.)
+  aviso: pontos de levantamento perto de Luanda: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Talatona: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Benguela: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Lubango: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Huambo: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Cabinda: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Malanje: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  aviso: pontos de levantamento perto de Soyo: Attempted to use detached Frame 'AC67B87346B769DA6FDFCD3DC7796FEE'.
+  lojas: 0
+  alterações: novos=1 removidos=2 preços=0 stock=0 promoções=0
+  concluído em 92726s
+[2026-11-09T17:00:02.287Z] AndraScrapy: execução #49 (cron)
+  categorias: 244
+  catálogo: 50/1582 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 6 em falta, 1 recuperados
+  produtos: 1589 (site anuncia 1588, completo)
+  stock real lido para 1589/1589 SKUs
+  lojas: 9
+  alterações: novos=9 removidos=10 preços=0 stock=67 promoções=0
+  concluído em 184s
+[2026-11-09T18:00:04.799Z] AndraScrapy: execução #50 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=0 promoções=0
+  concluído em 193s
+[2026-11-09T19:00:01.990Z] AndraScrapy: execução #51 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 194s
+[2026-11-09T20:00:04.996Z] AndraScrapy: execução #52 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 181s
+[2026-11-09T21:00:02.330Z] AndraScrapy: execução #53 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  aviso: lojas físicas indisponíveis (Waiting for selector `[class*="mapSectionItem"] h3` failed)
+  lojas: 1
+  alterações: novos=0 removidos=0 preços=7 stock=45 promoções=0
+  concluído em 214s
+[2026-11-09T22:00:01.927Z] AndraScrapy: execução #54 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=2 preços=0 stock=1 promoções=0
+  concluído em 185s
+[2026-11-09T23:00:01.721Z] AndraScrapy: execução #55 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 264s
+[2026-11-10T00:00:01.370Z] AndraScrapy: execução #56 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 327s
+[2026-11-10T01:00:02.986Z] AndraScrapy: execução #57 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=2 promoções=0
+  concluído em 367s
+[2026-11-10T02:00:02.140Z] AndraScrapy: execução #58 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 194s
+[2026-11-10T03:00:01.976Z] AndraScrapy: execução #59 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 799/1587 produtos
+  catálogo: 1049/1587 produtos
+  catálogo: 1299/1587 produtos
+  catálogo: 1549/1587 produtos
+  sitemap: 9 em falta, 1 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 349s
+[2026-11-10T04:00:01.871Z] AndraScrapy: execução #60 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 216s
+[2026-11-10T05:00:01.256Z] AndraScrapy: execução #61 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 348s
+[2026-11-10T06:00:01.340Z] AndraScrapy: execução #62 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 221s
+[2026-11-10T07:00:03.241Z] AndraScrapy: execução #63 (cron)
+[2026-11-10T07:01:34.113Z] ERRO: TimeoutError: Navigation timeout of 90000 ms exceeded
+    at new Deferred (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:57:34)
+    at Deferred.create (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:18:16)
+    at new LifecycleWatcher (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/LifecycleWatcher.js:70:46)
+    at CdpFrame.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:152:29)
+    at CdpFrame.<anonymous> (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)
+    at CdpPage.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:582:43)
+    at SiteSession.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:189:33)
+    at SiteSession.open (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:31:21)
+    at async runSync (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/sync.js:183:15)
+[2026-11-10T08:00:01.488Z] AndraScrapy: execução #64 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=2 promoções=0
+  concluído em 200s
+[2026-11-10T09:00:01.841Z] AndraScrapy: execução #65 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=1 stock=6 promoções=1
+  concluído em 201s
+[2026-11-10T10:00:01.698Z] AndraScrapy: execução #66 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 8 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=7 promoções=0
+  concluído em 186s
+[2026-11-10T11:00:01.751Z] AndraScrapy: execução #67 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 10 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=2 preços=0 stock=5 promoções=0
+  concluído em 185s
+[2026-11-10T12:00:04.786Z] AndraScrapy: execução #68 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1588 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 800/1588 produtos
+  catálogo: 1050/1588 produtos
+  catálogo: 1300/1588 produtos
+  catálogo: 1550/1588 produtos
+  sitemap: 9 em falta, 0 recuperados
+  produtos: 1588 (site anuncia 1588, completo)
+  stock real lido para 1588/1588 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=14 promoções=0
+  concluído em 226s
+[2026-11-10T13:00:04.695Z] AndraScrapy: execução #69 (cron)
+  categorias: 244
+  catálogo: 50/1587 produtos
+  catálogo: 300/1587 produtos
+  catálogo: 550/1587 produtos
+  catálogo: 800/1587 produtos
+  catálogo: 1050/1587 produtos
+  catálogo: 1300/1587 produtos
+  catálogo: 1550/1587 produtos
+  sitemap: 11 em falta, 0 recuperados
+  produtos: 1587 (site anuncia 1587, completo)
+  stock real lido para 1587/1587 SKUs
+  lojas: 9
+  alterações: novos=2 removidos=3 preços=0 stock=5 promoções=0
+  concluído em 224s
+[2026-11-10T14:00:01.628Z] AndraScrapy: execução #70 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 12 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=7 promoções=0
+  concluído em 174s
+[2026-11-10T15:00:01.819Z] AndraScrapy: execução #71 (cron)
+  categorias: 244
+  catálogo: 50/1585 produtos
+  catálogo: 300/1585 produtos
+  catálogo: 550/1585 produtos
+  catálogo: 800/1585 produtos
+  catálogo: 1050/1585 produtos
+  catálogo: 1299/1586 produtos
+  catálogo: 1549/1585 produtos
+  sitemap: 15 em falta, 1 recuperados
+  produtos: 1585 (site anuncia 1585, completo)
+  stock real lido para 1585/1585 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=2 preços=0 stock=10 promoções=0
+  concluído em 193s
+[2026-11-10T16:00:01.966Z] AndraScrapy: execução #72 (cron)
+  categorias: 244
+  catálogo: 50/1589 produtos
+  catálogo: 300/1589 produtos
+  catálogo: 550/1589 produtos
+  catálogo: 800/1589 produtos
+  catálogo: 1050/1589 produtos
+  catálogo: 1300/1589 produtos
+  catálogo: 1550/1589 produtos
+  sitemap: 14 em falta, 0 recuperados
+  produtos: 1589 (site anuncia 1589, completo)
+  stock real lido para 1589/1589 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=1 preços=0 stock=9 promoções=0
+  concluído em 310s
+[2026-11-10T17:00:03.062Z] AndraScrapy: execução #73 (cron)
+  categorias: 244
+  catálogo: 50/1585 produtos
+  catálogo: 300/1585 produtos
+  catálogo: 549/1585 produtos
+  catálogo: 798/1586 produtos
+  catálogo: 1047/1585 produtos
+  catálogo: 1296/1585 produtos
+  catálogo: 1541/1585 produtos
+  sitemap: 30 em falta, 9 recuperados
+  produtos: 1585 (site anuncia 1585, completo)
+  stock real lido para 1585/1585 SKUs
+  lojas: 9
+  alterações: novos=3 removidos=7 preços=0 stock=0 promoções=0
+  concluído em 204s
+[2026-11-10T18:00:01.468Z] AndraScrapy: execução #74 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 255s
+[2026-11-10T19:00:01.969Z] AndraScrapy: execução #75 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 329s
+[2026-11-10T20:00:01.331Z] AndraScrapy: execução #76 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 177s
+[2026-11-10T21:00:01.354Z] AndraScrapy: execução #77 (cron)
+  categorias: 244
+  catálogo: 50/1586 produtos
+  catálogo: 300/1586 produtos
+  catálogo: 550/1586 produtos
+  catálogo: 800/1586 produtos
+  catálogo: 1050/1586 produtos
+  catálogo: 1300/1586 produtos
+  catálogo: 1550/1586 produtos
+  sitemap: 13 em falta, 0 recuperados
+  produtos: 1586 (site anuncia 1586, completo)
+  stock real lido para 1586/1586 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=33 stock=62 promoções=0
+  concluído em 167s
+[2026-11-10T22:00:01.473Z] AndraScrapy: execução #78 (cron)
+  categorias: 244
+  catálogo: 50/1592 produtos
+  catálogo: 300/1592 produtos
+  catálogo: 550/1592 produtos
+  catálogo: 800/1592 produtos
+  catálogo: 1050/1592 produtos
+  catálogo: 1300/1592 produtos
+  catálogo: 1550/1592 produtos
+  sitemap: 20 em falta, 0 recuperados
+  produtos: 1592 (site anuncia 1592, completo)
+  stock real lido para 1592/1592 SKUs
+  lojas: 9
+  alterações: novos=8 removidos=7 preços=2 stock=4 promoções=0
+  concluído em 229s
+[2026-11-10T23:00:02.001Z] AndraScrapy: execução #79 (cron)
+  categorias: 244
+  catálogo: 50/1592 produtos
+  catálogo: 300/1592 produtos
+  catálogo: 550/1592 produtos
+  catálogo: 800/1592 produtos
+  catálogo: 1050/1592 produtos
+  catálogo: 1300/1592 produtos
+  catálogo: 1550/1592 produtos
+  sitemap: 20 em falta, 0 recuperados
+  produtos: 1592 (site anuncia 1592, completo)
+  stock real lido para 1592/1592 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 231s
+[2026-11-12T09:00:02.436Z] AndraScrapy: execução #80 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=4 preços=0 stock=17 promoções=0
+  concluído em 174s
+[2026-11-12T10:00:03.410Z] AndraScrapy: execução #81 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 6 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=4 promoções=0
+  concluído em 166s
+[2026-11-12T11:00:01.739Z] AndraScrapy: execução #82 (cron)
+  categorias: 244
+  catálogo: 50/1589 produtos
+  catálogo: 300/1589 produtos
+  catálogo: 550/1589 produtos
+  catálogo: 800/1589 produtos
+  catálogo: 1050/1589 produtos
+  catálogo: 1300/1589 produtos
+  catálogo: 1550/1589 produtos
+  sitemap: 7 em falta, 0 recuperados
+  produtos: 1589 (site anuncia 1589, completo)
+  stock real lido para 1589/1589 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=1 preços=0 stock=4 promoções=0
+  concluído em 165s
+[2026-11-12T12:00:01.527Z] AndraScrapy: execução #83 (cron)
+  categorias: 244
+  catálogo: 50/1590 produtos
+  catálogo: 300/1590 produtos
+  catálogo: 550/1590 produtos
+  catálogo: 800/1590 produtos
+  catálogo: 1050/1590 produtos
+  catálogo: 1300/1590 produtos
+  catálogo: 1550/1590 produtos
+  sitemap: 9 em falta, 0 recuperados
+  produtos: 1590 (site anuncia 1590, completo)
+  stock real lido para 1590/1590 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=2 preços=0 stock=8 promoções=0
+  concluído em 205s
+[2026-11-12T13:00:01.314Z] AndraScrapy: execução #84 (cron)
+  categorias: 244
+  catálogo: 50/1593 produtos
+  catálogo: 300/1593 produtos
+  catálogo: 550/1593 produtos
+  catálogo: 800/1593 produtos
+  catálogo: 1050/1593 produtos
+  catálogo: 1300/1593 produtos
+  catálogo: 1550/1593 produtos
+  sitemap: 9 em falta, 0 recuperados
+  produtos: 1593 (site anuncia 1593, completo)
+  stock real lido para 1593/1593 SKUs
+  lojas: 9
+  alterações: novos=3 removidos=0 preços=0 stock=3 promoções=0
+  concluído em 169s
+[2026-11-12T14:00:04.335Z] AndraScrapy: execução #85 (cron)
+  categorias: 244
+  catálogo: 50/1591 produtos
+  catálogo: 300/1591 produtos
+  catálogo: 550/1591 produtos
+  catálogo: 800/1591 produtos
+  catálogo: 1050/1591 produtos
+  catálogo: 1300/1591 produtos
+  catálogo: 1550/1591 produtos
+  sitemap: 10 em falta, 0 recuperados
+  produtos: 1591 (site anuncia 1591, completo)
+  stock real lido para 1591/1591 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=2 preços=0 stock=4 promoções=0
+  concluído em 176s
+[2026-11-12T20:00:02.054Z] AndraScrapy: execução #86 (cron)
+  categorias: 244
+  catálogo: 50/1588 produtos
+  catálogo: 300/1589 produtos
+  catálogo: 550/1588 produtos
+  catálogo: 799/1589 produtos
+  catálogo: 1048/1589 produtos
+  catálogo: 1297/1589 produtos
+  catálogo: 1546/1588 produtos
+  sitemap: 18 em falta, 5 recuperados
+  produtos: 1589 (site anuncia 1589, completo)
+  stock real lido para 1589/1589 SKUs
+  lojas: 9
+  alterações: novos=2 removidos=4 preços=0 stock=15 promoções=0
+  concluído em 202s
+[2026-11-13T07:00:03.191Z] AndraScrapy: execução #87 (cron)
+  categorias: 244
+  catálogo: 50/1577 produtos
+  catálogo: 299/1578 produtos
+  catálogo: 549/1578 produtos
+  catálogo: 799/1578 produtos
+  catálogo: 1049/1578 produtos
+  catálogo: 1299/1578 produtos
+  catálogo: 1549/1578 produtos
+  sitemap: 25 em falta, 1 recuperados
+  produtos: 1578 (site anuncia 1578, completo)
+  stock real lido para 1578/1578 SKUs
+  lojas: 9
+  alterações: novos=1 removidos=12 preços=22 stock=143 promoções=0
+  concluído em 193s

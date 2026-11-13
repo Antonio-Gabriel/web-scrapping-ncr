@@ -1,0 +1,55 @@
+<nav class="text-xs text-ink-mute"><a class="hover:text-ink" href="/execucoes">Execuções</a> › Ao vivo</nav>
+{{#> header heading="Acompanhar ao vivo" sub="O que o scraper está a abrir, a clicar e a ler neste momento."}}
+  <div class="flex flex-wrap items-center gap-3">
+    <span id="live-status" class="chip tone-neutral" role="status">A ligar…</span>
+    <span id="live-elapsed" class="tabular-nums text-sm text-ink-soft"></span>
+    <form method="post" action="/execucoes/iniciar">
+      <button id="live-run" class="btn btn-primary" {{#if running}}disabled{{/if}}>{{icon "play"}} Rodar agora</button>
+    </form>
+  </div>
+{{/header}}
+
+<section class="card p-4">
+  <ol id="live-phases" class="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 xl:grid-cols-6">
+    <li data-phase="browser" class="phase">Abrir o site</li>
+    <li data-phase="categories" class="phase">Categorias</li>
+    <li data-phase="products" class="phase">Produtos</li>
+    <li data-phase="stock" class="phase">Stock real</li>
+    <li data-phase="stores" class="phase">Lojas</li>
+    <li data-phase="save" class="phase">Guardar</li>
+  </ol>
+  <div id="live-progress" class="mt-3 hidden">
+    <div class="flex justify-between gap-3 text-xs text-ink-soft"><span id="live-progress-text" class="truncate"></span><span id="live-progress-count" class="shrink-0 tabular-nums"></span></div>
+    <div class="mt-1 h-1.5 overflow-hidden rounded-full bg-canvas"><div id="live-progress-bar" class="h-full rounded-full bg-brand-500 transition-[width] duration-300"></div></div>
+  </div>
+</section>
+
+<section class="grid gap-5 xl:grid-cols-[minmax(0,3fr)_minmax(320px,2fr)]">
+  <div class="card overflow-hidden">
+    <div class="flex items-center gap-2 border-b border-line bg-canvas px-3 py-2">
+      <span class="flex gap-1.5" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-line-strong"></span><span class="h-2.5 w-2.5 rounded-full bg-line-strong"></span><span class="h-2.5 w-2.5 rounded-full bg-line-strong"></span></span>
+      <span id="live-url" class="min-w-0 flex-1 truncate rounded-md border border-line bg-surface px-2.5 py-1 text-xs text-ink-soft">Sem página aberta</span>
+      <span id="live-badge" class="hidden shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-[#fbe9e9] px-2.5 py-0.5 text-xs font-semibold tabular-nums text-[#a82a2a]"></span>
+    </div>
+    <div class="relative aspect-[1366/900] bg-canvas">
+      <canvas id="live-frame" role="img" aria-label="Transmissão em direto do browser usado pelo scraper" class="absolute inset-0 hidden h-full w-full object-contain"></canvas>
+      <div id="live-empty" class="absolute inset-0 grid place-items-center p-6 text-center">
+        <div>
+          <p id="live-empty-title" class="font-medium">Sem imagem por agora</p>
+          <p id="live-empty-text" class="mx-auto mt-1 max-w-sm text-xs text-ink-mute">Carrega em "Rodar agora" para veres o browser a trabalhar.</p>
+        </div>
+      </div>
+    </div>
+    <p class="border-t border-line px-3 py-2 text-xs text-ink-mute">Imagem em direto do browser. Na leitura de produtos e de stock os dados vêm de pedidos internos e o site fica parado. O painel escuro é do AndraScrapy e mostra alguns dos dados lidos em cada pedido.</p>
+  </div>
+
+  <div class="card flex min-h-[420px] flex-col overflow-hidden xl:h-0 xl:min-h-full">
+    <div class="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
+      <h2 class="card-title">Registo de atividade</h2>
+      <span id="live-count" class="text-xs tabular-nums text-ink-mute"></span>
+    </div>
+    <ol id="live-feed" class="min-h-0 max-h-[60vh] flex-1 divide-y divide-line/70 overflow-y-auto xl:max-h-none" tabindex="0" aria-label="Registo de atividade"></ol>
+    <button id="live-follow" class="btn m-2 hidden justify-center">Voltar ao mais recente</button>
+  </div>
+</section>
+<script src="/js/live.js" defer></script>

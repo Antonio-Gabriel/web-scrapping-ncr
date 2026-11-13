@@ -1,0 +1,16 @@
+{{#> header heading="Preços" sub="Valores em kwanzas, tal como publicados no site."}}{{/header}}
+<section class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+  {{> kpi label="Preço mediano" value=(kzShort s.median_price) note="metade dos produtos custa menos"}}
+  {{> kpi label="Preço médio" value=(kzShort s.avg_price) note="puxado para cima pelos mais caros"}}
+  {{> kpi label="Mais caro" value=(kzShort highest.0.price) note=highest.0.name}}
+  {{> kpi label="Mais barato" value=(kzShort lowest.0.price) note=lowest.0.name}}
+</section>
+<section class="grid gap-5 lg:grid-cols-2">
+  <div class="card p-5"><h2 class="card-title">Produtos por faixa de preço</h2><p class="card-sub mb-4">Valores em kwanzas.</p>{{> columns rows=bands aria="Número de produtos por faixa de preço"}}</div>
+  <div class="card p-5"><h2 class="card-title">Preço mediano por departamento</h2><p class="card-sub mb-4">A mediana não é distorcida por poucos produtos muito caros.</p>{{> bars rows=medians}}</div>
+</section>
+<section class="grid gap-5 lg:grid-cols-2">
+  <div class="card overflow-hidden"><h2 class="card-title p-5 pb-3">Mais caros</h2><div class="overflow-x-auto"><table class="data-table"><tbody>{{#each highest}}<tr><td>{{> product-cell}}</td><td class="num">{{> price-cell}}</td></tr>{{/each}}</tbody></table></div></div>
+  <div class="card overflow-hidden"><h2 class="card-title p-5 pb-3">Mais baratos</h2><div class="overflow-x-auto"><table class="data-table"><tbody>{{#each lowest}}<tr><td>{{> product-cell}}</td><td class="num">{{> price-cell}}</td></tr>{{/each}}</tbody></table></div></div>
+</section>
+<section class="card overflow-hidden"><div class="p-5 pb-3"><h2 class="card-title">Mudanças de preço recentes</h2></div>{{> events rows=changes empty="Ainda sem mudanças de preço"}}</section>

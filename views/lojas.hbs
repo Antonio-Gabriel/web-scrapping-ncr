@@ -1,0 +1,11 @@
+{{#> header heading="Lojas" sub="Lojas físicas e pontos de levantamento publicados no site."}}{{/header}}
+<section class="grid grid-cols-2 gap-3 lg:grid-cols-3">
+  {{> kpi label="Lojas físicas" value=(num physical.length)}}
+  {{> kpi label="Pontos de levantamento" value=(num pickup.length)}}
+  {{> kpi label="Cidades" value=(num cities)}}
+</section>
+<section class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+  {{#each physical}}{{> store-card}}{{/each}}
+</section>
+{{#if pickup}}<h2 class="pt-2 text-base font-semibold">Pontos de levantamento</h2><section class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{{#each pickup}}{{> store-card}}{{/each}}</section>{{/if}}
+<p class="text-xs text-ink-mute">O site não associa stock a cada loja, por isso as quantidades deste dashboard são do total online.</p>

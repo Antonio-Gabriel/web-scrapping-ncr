@@ -1,0 +1,9 @@
+<article class="card flex flex-col p-5">
+  <div class="flex items-start justify-between gap-2"><h3 class="font-semibold">{{name}}</h3>{{#if city}}<span class="chip tone-neutral">{{city}}</span>{{/if}}</div>
+  <div class="mt-3 flex-1 space-y-2 text-ink-soft">
+    {{#if address}}<p class="flex gap-2">{{icon "pin" "mt-0.5 h-4 w-4 shrink-0 text-ink-mute"}}{{address}}</p>{{/if}}
+    {{#if phone}}<p class="flex gap-2">{{icon "phone" "mt-0.5 h-4 w-4 shrink-0 text-ink-mute"}}{{phone}}</p>{{/if}}
+    {{#if hoursText}}<p class="flex gap-2">{{icon "clock" "mt-0.5 h-4 w-4 shrink-0 text-ink-mute"}}{{hoursText}}</p>{{/if}}
+  </div>
+  {{#if mapUrl}}<a class="btn mt-4 self-start" href="{{mapUrl}}" target="_blank" rel="noopener noreferrer">Ver no mapa {{icon "external" "h-3.5 w-3.5"}}</a>{{/if}}
+</article>

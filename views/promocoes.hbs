@@ -1,0 +1,23 @@
+{{#> header heading="Promoções" sub="Produtos cujo preço de venda está abaixo do preço de tabela."}}
+  <a class="btn" href="/produtos.csv?status=promo&sort=discount&dir=desc">{{icon "download"}} Exportar CSV</a>
+{{/header}}
+<section class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+  {{> kpi label="Em promoção" value=(num s.promos) note="produtos"}}
+  {{> kpi label="Desconto médio" value=(pct s.avg_discount)}}
+  {{> kpi label="Maior desconto" value=(pct s.max_discount)}}
+  {{> kpi label="Poupança somada" value=(kzShort s.total_saving) note="uma unidade de cada produto"}}
+</section>
+<section class="grid gap-5 lg:grid-cols-3">
+  <div class="card p-5"><h2 class="card-title">Faixas de desconto</h2><p class="card-sub mb-4">Número de produtos.</p>{{> columns rows=bands aria="Número de produtos por faixa de desconto"}}</div>
+  <div class="card p-5"><h2 class="card-title">Por departamento</h2><p class="card-sub mb-4">Promoções e parte do departamento em promoção.</p>{{> bars rows=deps}}</div>
+  <div class="card p-5"><h2 class="card-title">Coleções com promoções</h2><p class="card-sub mb-3">Agrupamentos definidos pela loja.</p>
+    <ul class="divide-y divide-line/70">{{#each campaigns}}<li class="flex items-center justify-between gap-3 py-2"><span class="truncate">{{name}}</span><span class="shrink-0 text-xs text-ink-mute tabular-nums">{{num promos}} de {{num products}} · -{{pct avg_discount}}</span></li>{{else}}<li class="py-6 text-center text-xs text-ink-mute">Sem coleções com promoções.</li>{{/each}}</ul></div>
+</section>
+<div class="card overflow-hidden">
+  <div class="p-5 pb-3"><h2 class="card-title">Todas as promoções</h2><p class="card-sub">Do maior para o menor desconto.{{#if query.category}} <a class="text-brand-600 underline" href="/promocoes">Ver todos os departamentos</a>{{/if}}</p></div>
+  <div class="overflow-x-auto"><table class="data-table">
+    <thead><tr><th>Produto</th><th>Categoria</th><th class="num">Preço</th><th class="num">Desconto</th><th>Stock</th></tr></thead>
+    <tbody>{{#each rows}}<tr><td>{{> product-cell}}</td><td class="max-w-[180px] truncate text-ink-soft" title="{{category_path}}">{{category}}</td><td class="num">{{> price-cell}}</td><td class="num"><span class="chip tone-promo">-{{pct discount_pct}}</span></td><td>{{> stock-meter}}</td></tr>{{/each}}</tbody>
+  </table></div>
+  {{> pagination base="/promocoes"}}
+</div>

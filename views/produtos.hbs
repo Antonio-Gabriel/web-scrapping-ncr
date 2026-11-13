@@ -1,0 +1,47 @@
+{{#> header heading="Produtos" sub="Pesquisa, filtra e exporta todo o catálogo recolhido."}}
+  <a class="btn" href="{{exportUrl}}">{{icon "download"}} Exportar CSV</a>
+{{/header}}
+<div class="flex flex-wrap gap-2">
+  {{#each counts}}<a class="pill {{#if active}}active{{/if}}" href="{{link "/produtos" ../query status=(or key "") page=""}}">{{label}} <span class="tabular-nums opacity-70">{{num count}}</span></a>{{/each}}
+</div>
+<div class="card overflow-hidden">
+  <form action="/produtos" class="flex flex-wrap items-center gap-2 border-b border-line p-3" data-autosubmit>
+    <input type="hidden" name="status" value="{{f.status}}">
+    <input type="hidden" name="sort" value="{{f.sort}}"><input type="hidden" name="dir" value="{{f.dir}}">
+    <input class="field min-w-[200px] flex-1" type="search" name="q" value="{{f.q}}" placeholder="Nome, marca, referência ou EAN" aria-label="Pesquisar">
+    <select class="field max-w-[260px]" name="category" aria-label="Categoria"><option value="">Todas as categorias</option>{{#each departments}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}</select>
+    <select class="field max-w-[180px]" name="brand" aria-label="Marca"><option value="">Todas as marcas</option>{{#each brands}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}</select>
+    <button class="btn">Filtrar</button>
+    {{#if (or f.q (or f.category f.brand))}}<a class="btn" href="/produtos">Limpar</a>{{/if}}
+  </form>
+  {{#if rows}}
+  <div class="overflow-x-auto">
+    <table class="data-table">
+      <thead><tr>
+        <th><a href="{{sortLink "/produtos" query "name"}}">Produto {{sortMark query "name"}}</a></th>
+        <th>Categoria</th>
+        <th class="num"><a href="{{sortLink "/produtos" query "price"}}">Preço {{sortMark query "price"}}</a></th>
+        <th class="num"><a href="{{sortLink "/produtos" query "discount"}}">Desconto {{sortMark query "discount"}}</a></th>
+        <th><a href="{{sortLink "/produtos" query "stock"}}">Stock {{sortMark query "stock"}}</a></th>
+        <th>Estado</th><th></th>
+      </tr></thead>
+      <tbody>
+      {{#each rows}}
+      <tr>
+        <td>{{> product-cell}}</td>
+        <td class="max-w-[180px] truncate text-ink-soft" title="{{category_path}}">{{category}}</td>
+        <td class="num">{{> price-cell}}</td>
+        <td class="num">{{#if on_promo}}<span class="chip tone-promo">-{{pct discount_pct}}</span>{{else}}<span class="text-ink-mute">—</span>{{/if}}</td>
+        <td>{{> stock-meter}}</td>
+        <td><span class="chip tone-{{stockTone this}}">{{stockText this}}</span></td>
+        <td><a class="text-ink-mute hover:text-brand-600" href="{{safeUrl url}}" target="_blank" rel="noopener noreferrer" aria-label="Abrir na loja">{{icon "external"}}</a></td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{> pagination base="/produtos"}}
+  {{else}}
+  <div class="px-4 py-14 text-center"><p class="font-medium">Nenhum produto encontrado</p><p class="mt-1 text-xs text-ink-mute">Experimenta outra pesquisa ou limpa os filtros.</p></div>
+  {{/if}}
+</div>

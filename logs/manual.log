@@ -1,0 +1,114 @@
+[2026-11-03T19:47:13.047Z] AndraScrapy: execução #3 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=1 promoções=0
+  concluído em 233s
+[2026-11-03T19:53:04.726Z] AndraScrapy: execução #4 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 273s
+[2026-11-03T20:04:20.324Z] AndraScrapy: execução #6 (manual)
+[2026-11-03T20:04:21.825Z] ERRO: Error: net::ERR_NAME_NOT_RESOLVED at https://www.ncrangola.com/
+    at navigate (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:191:27)
+    at async Deferred.race (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/util/Deferred.js:33:20)
+    at async CdpFrame.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/cdp/Frame.js:153:25)
+    at async CdpPage.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:582:20)
+    at async SiteSession.goto (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:121:13)
+    at async SiteSession.open (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/scraper/browser.js:28:5)
+    at async runSync (file:///home/antoniogabriel/Documentos/Projects/Personal/WebScrapping/src/sync.js:183:15)
+[2026-11-03T20:05:03.416Z] AndraScrapy: execução #7 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 271s
+[2026-11-03T20:18:49.792Z] AndraScrapy: execução #8 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 209s
+[2026-11-03T20:23:24.783Z] AndraScrapy: execução #9 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 219s
+[2026-11-03T20:41:47.782Z] AndraScrapy: execução #10 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=63 promoções=0
+  concluído em 221s
+[2026-11-03T20:47:41.711Z] AndraScrapy: execução #11 (manual)
+  categorias: 244
+  catálogo: 50/1571 produtos
+  catálogo: 300/1571 produtos
+  catálogo: 550/1571 produtos
+  catálogo: 800/1571 produtos
+  catálogo: 1050/1571 produtos
+  catálogo: 1300/1571 produtos
+  catálogo: 1550/1571 produtos
+  sitemap: 16 em falta, 0 recuperados
+  produtos: 1571 (site anuncia 1571, completo)
+  stock real lido para 1571/1571 SKUs
+  lojas: 9
+  alterações: novos=0 removidos=0 preços=0 stock=0 promoções=0
+  concluído em 226s

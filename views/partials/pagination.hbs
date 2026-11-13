@@ -1,0 +1,8 @@
+<div class="flex flex-wrap items-center justify-between gap-2 border-t border-line px-4 py-3 text-xs text-ink-mute">
+  <span>A mostrar {{num from}}–{{num to}} de {{num total}}</span>
+  <div class="flex items-center gap-1.5">
+    {{#if (gt page 1)}}<a class="btn" href="{{link base query page=(add page -1)}}">Anterior</a>{{/if}}
+    <span class="px-2 tabular-nums">Página {{page}} de {{pages}}</span>
+    {{#if (gt pages page)}}<a class="btn" href="{{link base query page=(add page 1)}}">Seguinte</a>{{/if}}
+  </div>
+</div>
