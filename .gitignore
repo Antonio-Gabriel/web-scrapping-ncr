@@ -1,1 +1,9 @@
 node_modules
+
+# Ficheiros de execução
+data/*.db-shm
+data/*.db-wal
+data/.sync*.lock
+data/live-*/
+logs/manual-*.log
+logs/cron-*.log
