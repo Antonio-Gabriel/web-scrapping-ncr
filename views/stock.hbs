@@ -1,20 +1,22 @@
-{{#> header heading="Stock e alterações" sub="O que mudou no catálogo desde a primeira recolha."}}{{/header}}
+{{#> header heading="Stock e alterações" sub="O que mudou no catálogo desde a primeira recolha."}}
+  {{> export-menu dataset="alteracoes" total=total}}
+{{/header}}
 <section class="grid grid-cols-2 gap-3 lg:grid-cols-4">
   {{> kpi label="Reduções em 24 h" value=(num (or day.reductions 0)) note="stock reduzido, esgotado ou fora do catálogo"}}
   {{> kpi label="Reduções em 7 dias" value=(num (or week.reductions 0))}}
   {{> kpi label="Produtos novos em 7 dias" value=(num (or week.new_products 0))}}
-  {{> kpi label="Stock baixo agora" value=(num s.low_stock) note="5 unidades ou menos"}}
+  {{#if @root.src.hasQuantity}}{{> kpi label="Stock baixo agora" value=(num s.low_stock) note="5 unidades ou menos"}}{{else}}{{> kpi label="Fora de stock agora" value=(num s.out_of_stock) note="a loja não publica quantidades"}}{{/if}}
 </section>
 <section class="grid gap-5 xl:grid-cols-5">
   <div class="card p-5 xl:col-span-2">
     <h2 class="card-title">Níveis de stock</h2>
-    <p class="card-sub mb-4">Só se confirma stock exato até 49 unidades; acima disso o site indica apenas 50 ou mais.</p>
+    <p class="card-sub mb-4">{{#if @root.src.hasQuantity}}Só se confirma stock exato até 49 unidades; acima disso o site indica apenas 50 ou mais.{{else}}A Que Rápido só publica o estado: em stock, por encomenda ou fora de stock.{{/if}}</p>
     {{> segments levels=levels}}
-    <h3 class="mt-6 text-xs font-semibold">Quase a acabar</h3>
-    <ul class="mt-2 divide-y divide-line/70">{{#each low}}<li class="flex items-center justify-between gap-3 py-2"><a class="truncate hover:text-brand-600" href="/produtos/{{id}}">{{name}}</a><span class="chip tone-serious shrink-0">{{available_qty}} un.</span></li>{{else}}<li class="py-4 text-center text-xs text-ink-mute">Nenhum produto com stock baixo.</li>{{/each}}</ul>
+    <h3 class="mt-6 text-xs font-semibold">{{#if @root.src.hasQuantity}}Quase a acabar{{else}}Fora de stock{{/if}}</h3>
+    <ul class="mt-2 divide-y divide-line/70">{{#each low}}<li class="flex items-center justify-between gap-3 py-2"><a class="truncate hover:text-brand-600" href="{{productHref source id}}">{{name}}</a><span class="chip tone-serious shrink-0">{{#if availability}}{{availabilityText availability}}{{else}}{{available_qty}} un.{{/if}}</span></li>{{else}}<li class="py-4 text-center text-xs text-ink-mute">Nenhum produto com stock baixo.</li>{{/each}}</ul>
   </div>
   <div class="card overflow-hidden xl:col-span-3">
-    <div class="flex flex-wrap gap-2 border-b border-line p-3">{{#each counts}}<a class="pill {{#if active}}active{{/if}}" href="/stock{{#unless (eq key "all")}}?tipo={{key}}{{/unless}}">{{label}} <span class="tabular-nums opacity-70">{{num count}}</span></a>{{/each}}</div>
+    <div class="flex flex-wrap gap-2 border-b border-line p-3">{{#each counts}}<a class="pill {{#if active}}active{{/if}}" href="{{link "/stock" @root.query tipo=(or key "") page=""}}">{{label}} <span class="tabular-nums opacity-70">{{num count}}</span></a>{{/each}}</div>
     {{> events rows=rows empty="Sem alterações neste filtro"}}
     {{#if rows}}{{> pagination base="/stock"}}{{/if}}
   </div>

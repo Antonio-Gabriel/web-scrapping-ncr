@@ -91,6 +91,11 @@
 
   document.querySelectorAll('form[data-autosubmit] select').forEach((s) => s.addEventListener('change', () => s.form.requestSubmit()));
 
+  // Menus de exportação: fecham ao clicar fora ou com Esc.
+  const menus = [...document.querySelectorAll('details[data-menu]')];
+  document.addEventListener('click', (e) => menus.forEach((m) => { if (!m.contains(e.target)) m.open = false; }));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') menus.forEach((m) => { m.open = false; }); });
+
   const sidebar = document.getElementById('sidebar'); const backdrop = document.getElementById('backdrop');
   const toggle = (open) => { sidebar.classList.toggle('hidden', !open); sidebar.classList.toggle('flex', open); backdrop.classList.toggle('hidden', !open); };
   document.getElementById('menu-btn')?.addEventListener('click', () => toggle(sidebar.classList.contains('hidden')));

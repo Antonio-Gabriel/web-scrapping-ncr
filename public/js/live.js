@@ -1,6 +1,9 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const MAX_ROWS = 600;
+  // Fonte acompanhada nesta página (NCR por omissão).
+  const FONTE = document.getElementById('live-config')?.dataset.fonte || 'ncr';
+  const FQ = FONTE === 'ncr' ? '' : `?fonte=${encodeURIComponent(FONTE)}`;
   const KINDS = {
     start: ['Início', 'tone-info'], phase: ['Etapa', 'tone-promo'], navigate: ['Abrir', 'tone-info'], loaded: ['Aberta', 'tone-good'],
     click: ['Clique', 'tone-promo'], request: ['Pedido', 'tone-neutral'], progress: ['Leitura', 'tone-neutral'], info: ['Info', 'tone-neutral'],
@@ -67,7 +70,7 @@
       let sub = 'Carrega em "Rodar agora" para veres o browser a trabalhar.';
       if (state.startedAt && state.live === false) {
         title = 'Esta execução não transmite imagem';
-        sub = 'As execuções automáticas poupam recursos e só escrevem o registo. As iniciadas por "Rodar agora" mostram o browser.';
+        sub = 'Só as execuções iniciadas por "Rodar agora" mostram o browser. As automáticas e as feitas pela linha de comandos só escrevem o registo.';
       } else if (busy) {
         title = 'À espera da primeira imagem';
         sub = 'O browser está a arrancar.';
@@ -165,7 +168,7 @@
   async function playVideo() {
     for (;;) {
       try {
-        const res = await fetch('/execucoes/ao-vivo/video', { cache: 'no-store' });
+        const res = await fetch(`/execucoes/ao-vivo/video${FQ}`, { cache: 'no-store' });
         const reader = res.body.getReader();
         let buf = new Uint8Array(0);
         for (;;) {
@@ -209,7 +212,7 @@
   renderStatus();
   setInterval(renderElapsed, 1000);
 
-  const stream = new EventSource('/execucoes/ao-vivo/stream');
+  const stream = new EventSource(`/execucoes/ao-vivo/stream${FQ}`);
   const afterUpdate = () => {
     $('live-count').textContent = `${state.count} eventos`;
     renderStatus();

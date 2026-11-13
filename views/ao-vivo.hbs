@@ -1,9 +1,9 @@
-<nav class="text-xs text-ink-mute"><a class="hover:text-ink" href="/execucoes">Execuções</a> › Ao vivo</nav>
+<nav class="text-xs text-ink-mute"><a class="hover:text-ink" href="/execucoes{{@root.fq}}">Execuções</a> › Ao vivo</nav>
 {{#> header heading="Acompanhar ao vivo" sub="O que o scraper está a abrir, a clicar e a ler neste momento."}}
   <div class="flex flex-wrap items-center gap-3">
     <span id="live-status" class="chip tone-neutral" role="status">A ligar…</span>
     <span id="live-elapsed" class="tabular-nums text-sm text-ink-soft"></span>
-    <form method="post" action="/execucoes/iniciar">
+    <form method="post" action="/execucoes/iniciar"><input type="hidden" name="fonte" value="{{@root.src.key}}">
       <button id="live-run" class="btn btn-primary" {{#if running}}disabled{{/if}}>{{icon "play"}} Rodar agora</button>
     </form>
   </div>
@@ -11,12 +11,7 @@
 
 <section class="card p-4">
   <ol id="live-phases" class="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 xl:grid-cols-6">
-    <li data-phase="browser" class="phase">Abrir o site</li>
-    <li data-phase="categories" class="phase">Categorias</li>
-    <li data-phase="products" class="phase">Produtos</li>
-    <li data-phase="stock" class="phase">Stock real</li>
-    <li data-phase="stores" class="phase">Lojas</li>
-    <li data-phase="save" class="phase">Guardar</li>
+    {{#each phases}}<li data-phase="{{key}}" class="phase">{{label}}</li>{{/each}}
   </ol>
   <div id="live-progress" class="mt-3 hidden">
     <div class="flex justify-between gap-3 text-xs text-ink-soft"><span id="live-progress-text" class="truncate"></span><span id="live-progress-count" class="shrink-0 tabular-nums"></span></div>
@@ -52,4 +47,5 @@
     <button id="live-follow" class="btn m-2 hidden justify-center">Voltar ao mais recente</button>
   </div>
 </section>
+<div id="live-config" hidden data-fonte="{{@root.src.key}}"></div>
 <script src="/js/live.js" defer></script>

@@ -1,7 +1,7 @@
 {{#> header heading="Execuções" sub="Cada sincronização com o site, manual ou automática."}}
   <div class="flex flex-wrap gap-2">
-    <a class="btn" href="/execucoes/ao-vivo">{{icon "eye"}} Acompanhar ao vivo</a>
-    <form method="post" action="/execucoes/iniciar">
+    <a class="btn" href="/execucoes/ao-vivo{{@root.fq}}">{{icon "eye"}} Acompanhar ao vivo</a>
+    <form method="post" action="/execucoes/iniciar"><input type="hidden" name="fonte" value="{{@root.src.key}}">
       <button class="btn btn-primary" {{#if running}}disabled{{/if}}>{{icon "play"}} {{#if running}}A decorrer…{{else}}Rodar agora{{/if}}</button>
     </form>
   </div>

@@ -13,7 +13,7 @@
   <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r border-line bg-surface lg:sticky lg:top-0 lg:flex lg:h-screen">
     <a href="/" class="flex items-center gap-2.5 px-5 pb-4 pt-5">
       <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-500 text-white">{{icon "activity" "h-4 w-4"}}</span>
-      <span><span class="block text-[15px] font-semibold leading-4">AndraScrapy</span><span class="block text-[11px] text-ink-mute">NCR Angola</span></span>
+      <span><span class="block text-[15px] font-semibold leading-4">AndraScrapy</span><span class="block text-[11px] text-ink-mute">NCR Angola · Que Rápido</span></span>
     </a>
     <nav class="flex-1 space-y-5 overflow-y-auto px-3 py-2">
       {{#each nav}}
@@ -26,12 +26,16 @@
       {{/each}}
     </nav>
     <div class="m-3 rounded-xl border border-line bg-canvas p-3">
-      <div class="flex items-center justify-between gap-2">
-        <p class="text-xs font-semibold">Sincronização</p>
-        {{#if sync.failed}}<span class="chip tone-critical">Falhou</span>{{else if sync.stale}}<span class="chip tone-serious">Atrasada</span>{{else}}<span class="chip tone-good">Em dia</span>{{/if}}
+      <p class="text-xs font-semibold">Sincronização</p>
+      {{#each syncs}}
+      <div class="mt-2 {{#unless @first}}border-t border-line pt-2{{/unless}}">
+        <div class="flex items-center justify-between gap-2">
+          <p class="text-xs font-medium">{{name}}</p>
+          {{#if failed}}<span class="chip tone-critical">Falhou</span>{{else if never}}<span class="chip tone-neutral">Sem dados</span>{{else if stale}}<span class="chip tone-serious">Atrasada</span>{{else}}<span class="chip tone-good">Em dia</span>{{/if}}
+        </div>
+        <p class="mt-0.5 text-xs text-ink-mute">Última: {{ago run.finished_at}} · próxima às {{next}}</p>
       </div>
-      <p class="mt-1.5 text-xs text-ink-soft">Última: {{ago sync.run.finished_at}}</p>
-      <p class="text-xs text-ink-mute">Próxima às {{sync.next}}</p>
+      {{/each}}
     </div>
   </aside>
   <div id="backdrop" class="fixed inset-0 z-30 hidden bg-black/30 lg:hidden"></div>
@@ -39,11 +43,11 @@
   <div class="min-w-0 flex-1">
     <header class="sticky top-0 z-20 flex items-center gap-3 border-b border-line bg-surface/95 px-4 py-2.5 backdrop-blur sm:px-6">
       <button id="menu-btn" class="btn lg:hidden" aria-label="Abrir menu">{{icon "menu"}}</button>
-      <form action="/produtos" class="relative max-w-md flex-1" role="search">
+      <form action="/produtos" class="relative max-w-md flex-1" role="search">{{#if fonteKey}}<input type="hidden" name="fonte" value="{{fonteKey}}">{{/if}}
         <span class="pointer-events-none absolute left-3 top-2 text-ink-mute">{{icon "search"}}</span>
         <input id="global-search" name="q" value="{{searchValue}}" type="search" aria-label="Pesquisar produtos" placeholder="Pesquisar produto, marca ou referência…" class="field w-full rounded-full bg-canvas pl-9">
       </form>
-      <a href="https://www.ncrangola.com" target="_blank" rel="noopener noreferrer" class="btn ml-auto hidden sm:inline-flex">ncrangola.com {{icon "external" "h-3.5 w-3.5"}}</a>
+      <a href="{{headerSite.url}}" target="_blank" rel="noopener noreferrer" class="btn ml-auto hidden sm:inline-flex">{{headerSite.label}} {{icon "external" "h-3.5 w-3.5"}}</a>
     </header>
     <main class="mx-auto max-w-[1400px] space-y-5 p-4 sm:p-6">{{{body}}}</main>
   </div>

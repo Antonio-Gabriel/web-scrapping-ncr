@@ -1,11 +1,16 @@
 {{#> header heading="Business Intelligence" sub="Composição do catálogo, valor em stock, promoções e evolução ao longo do tempo."}}{{/header}}
 <section class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
+  {{#if src.hasQuantity}}
   {{> kpi label="Valor em stock (mínimo)" value=(kzShort s.stock_value) note="preço × unidades confirmadas"}}
   {{> kpi label="Unidades confirmadas" value=(num s.units) note="cada item conta no máximo 50"}}
+  {{else}}
+  {{> kpi label="Produtos" value=(num s.products) note="todos os da loja"}}
+  {{> kpi label="Em stock" value=(num s.in_stock) note="a loja não publica quantidades"}}
+  {{/if}}
   {{> kpi label="Preço mediano" value=(kzShort s.median_price)}}
   {{> kpi label="Desconto médio" value=(pct s.avg_discount) note="nos produtos em promoção"}}
-  {{> kpi label="Stock baixo" value=(num s.low_stock) note="5 unidades ou menos"}}
-  {{> kpi label="Esgotados listados" value=(num s.out_of_stock)}}
+  {{#if src.hasQuantity}}{{> kpi label="Stock baixo" value=(num s.low_stock) note="5 unidades ou menos"}}{{else}}{{> kpi label="Por encomenda" value=(num s.backorder)}}{{/if}}
+  {{> kpi label="Fora de stock" value=(num s.out_of_stock)}}
 </section>
 <section class="card p-5">
   <h2 class="card-title">Evolução</h2>
@@ -25,14 +30,16 @@
   <div class="card p-5"><h2 class="card-title">Níveis de stock</h2><p class="card-sub mb-4">Toda a oferta ativa.</p>{{> segments levels=levels}}</div>
   <div class="card p-5"><h2 class="card-title">Faixas de desconto</h2><p class="card-sub mb-4">Número de produtos em promoção.</p>{{> columns rows=bands aria="Produtos por faixa de desconto"}}</div>
 </section>
-<section class="grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
-  <div class="card p-5"><h2 class="card-title">Valor em stock</h2><p class="card-sub mb-4">Mínimo confirmado, por departamento.</p>{{> bars rows=value}}</div>
+<section class="grid gap-5 lg:grid-cols-2 {{#if src.hasQuantity}}xl:grid-cols-4{{else}}xl:grid-cols-3{{/if}}">
+  {{#if src.hasQuantity}}<div class="card p-5"><h2 class="card-title">Valor em stock</h2><p class="card-sub mb-4">Mínimo confirmado, por departamento.</p>{{> bars rows=value}}</div>{{/if}}
   <div class="card p-5"><h2 class="card-title">Taxa de promoção</h2><p class="card-sub mb-4">Parte de cada departamento em desconto.</p>{{> bars rows=promoRate}}</div>
   <div class="card p-5"><h2 class="card-title">Preço mediano</h2><p class="card-sub mb-4">Por departamento.</p>{{> bars rows=medians}}</div>
   <div class="card p-5"><h2 class="card-title">Principais marcas</h2><p class="card-sub mb-4">Por número de produtos.</p>{{> bars rows=brands}}</div>
 </section>
+{{#if src.hasQuantity}}
 <section class="card overflow-hidden">
   <div class="p-5 pb-3"><h2 class="card-title">Produtos com maior saída estimada</h2><p class="card-sub">Soma das reduções de stock observadas. É uma estimativa: reposições entre leituras e stock acima de 50 não são visíveis.</p></div>
   {{#if movers}}<div class="overflow-x-auto"><table class="data-table"><thead><tr><th>Produto</th><th class="num">Reduções</th><th class="num">Unidades</th></tr></thead><tbody>{{#each movers}}<tr><td>{{> product-cell}}</td><td class="num">{{num reductions}}</td><td class="num">{{#if is_minimum}}≥ {{/if}}{{num units}}</td></tr>{{/each}}</tbody></table></div>
   {{else}}<p class="px-5 pb-8 pt-4 text-center text-sm text-ink-mute">Ainda sem reduções registadas.</p>{{/if}}
 </section>
+{{/if}}

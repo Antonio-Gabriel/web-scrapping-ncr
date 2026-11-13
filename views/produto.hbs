@@ -1,4 +1,4 @@
-<nav class="text-xs text-ink-mute"><a class="hover:text-ink" href="/produtos">Produtos</a> › {{product.category_path}}</nav>
+<nav class="text-xs text-ink-mute"><a class="hover:text-ink" href="/produtos{{@root.fq}}">Produtos</a> › {{product.category_path}}</nav>
 <section class="card grid gap-6 p-5 md:grid-cols-[220px_1fr]">
   <div class="grid h-56 place-items-center overflow-hidden rounded-xl border border-line bg-white">
     {{#if product.image_url}}<img src="{{thumb product.image_url 440}}" alt="{{product.name}}" referrerpolicy="no-referrer" class="h-full w-full object-contain">{{/if}}

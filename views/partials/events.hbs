@@ -6,7 +6,7 @@
   {{#each rows}}
   <tr>
     <td><span class="chip tone-{{eventTone type}}">{{eventLabel type}}</span></td>
-    <td><a class="line-clamp-1 min-w-[200px] font-medium hover:text-brand-600" href="/produtos/{{product_id}}">{{product_name}}</a></td>
+    <td><a class="line-clamp-1 min-w-[200px] font-medium hover:text-brand-600" href="{{productHref source product_id}}">{{product_name}}</a>{{#if @root.combined}}<span class="mt-0.5 block text-[11px] text-ink-mute">{{sourceName source}}</span>{{/if}}</td>
     <td class="whitespace-nowrap text-ink-soft tabular-nums">{{eventDetail this}}</td>
     <td class="whitespace-nowrap text-xs text-ink-mute" title="{{date at}}">{{ago at}}</td>
   </tr>

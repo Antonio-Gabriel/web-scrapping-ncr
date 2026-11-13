@@ -37,17 +37,27 @@ const EVENT_META = {
   stock_down: ['Stock reduzido', 'warning'], stock_up: ['Stock aumentou', 'good'], out_of_stock: ['Esgotou', 'critical'],
   back_in_stock: ['Reposto', 'good'], price_up: ['Preço subiu', 'warning'], price_down: ['Preço desceu', 'good'],
   promo_start: ['Entrou em promoção', 'promo'], promo_end: ['Saiu de promoção', 'neutral'],
+  to_backorder: ['Passou a por encomenda', 'warning'], from_backorder: ['Voltou a ter stock', 'good'],
 };
+const AVAILABILITY_TEXT = { in_stock: 'Em stock', backorder: 'Por encomenda', out_of_stock: 'Fora de stock' };
+export const availabilityText = (a) => AVAILABILITY_TEXT[a] || '—';
+const SOURCE_NAMES = { ncr: 'NCR Angola', qr: 'Que Rápido' };
+export const sourceName = (k) => SOURCE_NAMES[k] || k;
+/** Endereço de um produto no dashboard; a fonte vai no parâmetro "fonte". */
+export const productHref = (source, id) => `/produtos/${encodeURIComponent(id)}${source && source !== 'ncr' ? `?fonte=${source}` : ''}`;
 export const eventLabel = (t) => EVENT_META[t]?.[0] || t;
 export const eventTone = (t) => EVENT_META[t]?.[1] || 'neutral';
 export function eventDetail(e) {
   if (e.type === 'price_up' || e.type === 'price_down') return `${kz(e.old_value)} → ${kz(e.new_value)}`;
   if (e.type === 'new_product') return e.new_value != null ? kz(e.new_value) : '';
   if (e.type === 'promo_start') return e.note ? `Desconto de ${e.note.replace('.', ',')}` : '';
+  // Sem quantidade (Que Rápido), a nota diz o estado do stock.
+  if ((e.type === 'out_of_stock' || e.type === 'back_in_stock') && e.old_value == null && e.new_value == null) return e.note || '';
   if (['stock_down', 'stock_up', 'out_of_stock', 'back_in_stock'].includes(e.type)) {
     const units = e.delta != null ? ` (${e.note === 'pelo menos' ? 'pelo menos ' : ''}${e.delta > 0 ? '+' : ''}${e.delta} un.)` : '';
     return `${stockLabel(e.old_value)} → ${stockLabel(e.new_value)}${units}`;
   }
+  if (e.type === 'to_backorder' || e.type === 'from_backorder') return e.note || '';
   if (e.type === 'removed') return `Esgotado ou retirado${e.old_value != null ? `; último stock: ${stockLabel(e.old_value)}` : ''}`;
   return '';
 }
@@ -74,7 +84,7 @@ const ICONS = {
 };
 
 export const helpers = {
-  kz, kzShort, num, pct, date, ago, stockLabel, eventLabel, eventTone, eventDetail,
+  kz, kzShort, num, pct, date, ago, stockLabel, eventLabel, eventTone, eventDetail, availabilityText, sourceName, productHref,
   eq: (a, b) => a === b,
   gt: (a, b) => a > b,
   or: (a, b) => a || b,
@@ -85,16 +95,19 @@ export const helpers = {
   /** Miniatura redimensionada pela CDN da VTEX (o original pode ter vários MB). */
   thumb: (url, size) => {
     if (typeof url !== 'string' || !url.startsWith('https://')) return '';
+    if (!url.includes('/arquivos/ids/')) return url; // Que Rápido: o endereço já é uma miniatura
     return url.replace(/\/arquivos\/ids\/(\d+)\//, `/arquivos/ids/$1-${size}-${size}/`);
   },
   safeUrl: (url) => (typeof url === 'string' && url.startsWith('https://') ? url : '#'),
   stockTone: (p) => {
     if (!p.is_available) return 'critical';
+    if (p.availability === 'backorder') return 'warning';
     if (p.stock_known && p.available_qty <= config.lowStockAt) return 'serious';
     return 'good';
   },
   stockText: (p) => {
     if (!p.active) return 'Fora do catálogo';
+    if (p.availability) return availabilityText(p.availability);
     if (!p.is_available) return 'Esgotado';
     if (p.stock_known && p.available_qty <= config.lowStockAt) return 'Stock baixo';
     return 'Disponível';

@@ -2,7 +2,7 @@
 <p class="-mt-3 text-sm text-ink-soft">{{num withProducts}} de {{num total}} categorias têm produtos. As restantes estão vazias no site e ficam ocultas.</p>
 <div class="card overflow-hidden">
   <div class="grid grid-cols-[1fr_70px] gap-3 border-b border-line px-4 py-2.5 pl-10 text-xs font-medium text-ink-mute sm:grid-cols-[1fr_90px_130px_90px_90px]">
-    <span>Categoria</span><span class="num">Produtos</span><span class="num hidden sm:block">Preço médio</span><span class="num hidden sm:block">Promoções</span><span class="num hidden sm:block">Stock baixo</span>
+    <span>Categoria</span><span class="num">Produtos</span><span class="num hidden sm:block">Preço médio</span><span class="num hidden sm:block">Promoções</span><span class="num hidden sm:block">{{#if src.hasQuantity}}Stock baixo{{else}}Fora de stock{{/if}}</span>
   </div>
   {{#each roots}}
   <details class="group border-b border-line last:border-b-0" {{#if @first}}open{{/if}}>

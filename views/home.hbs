@@ -1,23 +1,25 @@
-{{#> header heading="Visão geral" sub="O catálogo da NCR Angola, atualizado de hora a hora."}}
+{{#> header heading="Visão geral" sub="As duas lojas juntas: NCR Angola e Que Rápido Angola, atualizadas de hora a hora."}}
   <a href="/bi" class="btn btn-primary">{{icon "chart"}} Abrir BI</a>
 {{/header}}
 <section class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
-  {{> kpi label="Produtos" value=(num s.products) note="ativos no catálogo"}}
-  {{> kpi label="Categorias" value=(num s.categories) note="com produtos"}}
-  {{> kpi label="Marcas" value=(num s.brands)}}
-  {{> kpi label="Em promoção" value=(num s.promos) note="com desconto ativo"}}
-  {{> kpi label="Preço mediano" value=(kzShort s.median_price)}}
-  {{> kpi label="Lojas" value=(num s.stores) note="físicas"}}
+  {{> kpi label="Produtos" value=(num total.products) note=notes.products}}
+  {{> kpi label="Categorias" value=(num total.categories) note=notes.categories}}
+  {{> kpi label="Marcas" value=(num total.brands) note=notes.brands}}
+  {{> kpi label="Em promoção" value=(num total.promos) note=notes.promos}}
+  {{> kpi label="Fora de stock" value=(num total.out_of_stock) note=notes.out_of_stock}}
+  {{> kpi label="Preço mediano" value=(kzShort total.median_price) note=notes.median_price}}
 </section>
 <section class="grid gap-5 xl:grid-cols-3">
   <div class="card p-5">
-    <h2 class="card-title">Produtos por departamento</h2>
-    <p class="card-sub mb-4">Um produto conta em cada departamento a que pertence.</p>
+    <h2 class="card-title">Produtos por loja</h2>
+    <p class="card-sub mb-4">Produtos ativos em cada fonte.</p>
+    {{> bars rows=bySource}}
+    <h3 class="mb-3 mt-6 text-xs font-semibold">Maiores departamentos</h3>
     {{> bars rows=deps}}
   </div>
   <div class="card overflow-hidden xl:col-span-2">
     <div class="flex items-center justify-between gap-3 p-5 pb-3">
-      <div><h2 class="card-title">Últimas alterações</h2><p class="card-sub">Nas últimas 24 h: {{num (or day.reductions 0)}} reduções de stock, {{num (or day.new_products 0)}} produtos novos, {{num (or day.price_changes 0)}} mudanças de preço.</p></div>
+      <div><h2 class="card-title">Últimas alterações</h2><p class="card-sub">Nas últimas 24 h, nas duas lojas: {{num day.reductions}} reduções de stock, {{num day.new_products}} produtos novos, {{num day.price_changes}} mudanças de preço.</p></div>
       <a class="btn" href="/stock">Ver todas</a>
     </div>
     {{> events rows=events empty="Ainda sem alterações"}}
@@ -25,13 +27,13 @@
 </section>
 <section class="grid gap-5 xl:grid-cols-2">
   <div class="card overflow-hidden">
-    <div class="flex items-center justify-between p-5 pb-3"><div><h2 class="card-title">Maiores descontos</h2><p class="card-sub">Desconto médio de {{pct s.avg_discount}} em {{num s.promos}} produtos.</p></div><a class="btn" href="/promocoes">Ver promoções</a></div>
+    <div class="flex items-center justify-between p-5 pb-3"><div><h2 class="card-title">Maiores descontos</h2><p class="card-sub">Das duas lojas, por percentagem de desconto.</p></div><a class="btn" href="/promocoes">Ver promoções</a></div>
     <div class="overflow-x-auto"><table class="data-table"><tbody>
-      {{#each promos}}<tr><td>{{> product-cell}}</td><td class="num">{{> price-cell}}</td><td class="num"><span class="chip tone-promo">-{{pct discount_pct}}</span></td></tr>{{/each}}
+      {{#each promos}}<tr><td>{{> product-cell}}</td><td class="text-xs text-ink-mute">{{sourceName source}}</td><td class="num">{{> price-cell}}</td><td class="num"><span class="chip tone-promo">-{{pct discount_pct}}</span></td></tr>{{/each}}
     </tbody></table></div>
   </div>
   <div class="card overflow-hidden">
-    <div class="flex items-center justify-between p-5 pb-3"><div><h2 class="card-title">Stock quase a acabar</h2><p class="card-sub">{{num s.low_stock}} produtos com 5 unidades ou menos.</p></div><a class="btn" href="/produtos?status=low&sort=stock">Ver todos</a></div>
+    <div class="flex items-center justify-between p-5 pb-3"><div><h2 class="card-title">Stock quase a acabar</h2><p class="card-sub">NCR Angola: {{num ncr.low_stock}} produtos com 5 unidades ou menos. A Que Rápido não publica quantidades.</p></div><a class="btn" href="/produtos?status=low&sort=stock">Ver todos</a></div>
     <div class="overflow-x-auto"><table class="data-table"><tbody>
       {{#each low}}<tr><td>{{> product-cell}}</td><td class="num">{{> price-cell}}</td><td>{{> stock-meter}}</td></tr>{{/each}}
     </tbody></table></div>

@@ -1,0 +1,10 @@
+<details class="relative" data-menu>
+  <summary class="btn list-none">{{icon "download"}} Exportar <span aria-hidden="true" class="text-ink-mute">▾</span></summary>
+  <div class="absolute right-0 z-30 mt-1 w-56 overflow-hidden rounded-xl border border-line bg-surface py-1 shadow-lg" role="menu">
+    <p class="px-3 pb-1 pt-1.5 text-[11px] font-medium text-ink-mute">{{num total}} linhas, com os filtros atuais</p>
+    <a role="menuitem" class="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-canvas" href="/exportar/{{dataset}}/pdf{{@root.exportQs}}">PDF <span class="text-xs text-ink-mute">para imprimir</span></a>
+    <a role="menuitem" class="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-canvas" href="/exportar/{{dataset}}/xlsx{{@root.exportQs}}">Excel <span class="text-xs text-ink-mute">.xlsx</span></a>
+    <a role="menuitem" class="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-canvas" href="/exportar/{{dataset}}/csv{{@root.exportQs}}">CSV <span class="text-xs text-ink-mute">separado por ;</span></a>
+    <a role="menuitem" class="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-canvas" href="/exportar/{{dataset}}/json{{@root.exportQs}}">JSON <span class="text-xs text-ink-mute">para programas</span></a>
+  </div>
+</details>

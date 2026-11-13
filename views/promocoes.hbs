@@ -1,5 +1,5 @@
 {{#> header heading="Promoções" sub="Produtos cujo preço de venda está abaixo do preço de tabela."}}
-  <a class="btn" href="/produtos.csv?status=promo&sort=discount&dir=desc">{{icon "download"}} Exportar CSV</a>
+  {{> export-menu dataset="produtos" total=total}}
 {{/header}}
 <section class="grid grid-cols-2 gap-3 lg:grid-cols-4">
   {{> kpi label="Em promoção" value=(num s.promos) note="produtos"}}
@@ -14,7 +14,7 @@
     <ul class="divide-y divide-line/70">{{#each campaigns}}<li class="flex items-center justify-between gap-3 py-2"><span class="truncate">{{name}}</span><span class="shrink-0 text-xs text-ink-mute tabular-nums">{{num promos}} de {{num products}} · -{{pct avg_discount}}</span></li>{{else}}<li class="py-6 text-center text-xs text-ink-mute">Sem coleções com promoções.</li>{{/each}}</ul></div>
 </section>
 <div class="card overflow-hidden">
-  <div class="p-5 pb-3"><h2 class="card-title">Todas as promoções</h2><p class="card-sub">Do maior para o menor desconto.{{#if query.category}} <a class="text-brand-600 underline" href="/promocoes">Ver todos os departamentos</a>{{/if}}</p></div>
+  <div class="p-5 pb-3"><h2 class="card-title">Todas as promoções</h2><p class="card-sub">Do maior para o menor desconto.{{#if query.category}} <a class="text-brand-600 underline" href="/promocoes{{@root.fq}}">Ver todos os departamentos</a>{{/if}}</p></div>
   <div class="overflow-x-auto"><table class="data-table">
     <thead><tr><th>Produto</th><th>Categoria</th><th class="num">Preço</th><th class="num">Desconto</th><th>Stock</th></tr></thead>
     <tbody>{{#each rows}}<tr><td>{{> product-cell}}</td><td class="max-w-[180px] truncate text-ink-soft" title="{{category_path}}">{{category}}</td><td class="num">{{> price-cell}}</td><td class="num"><span class="chip tone-promo">-{{pct discount_pct}}</span></td><td>{{> stock-meter}}</td></tr>{{/each}}</tbody>

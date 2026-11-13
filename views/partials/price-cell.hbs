@@ -1,2 +1,2 @@
-<span class="block font-medium tabular-nums">{{kz price}}</span>
+<span class="block font-medium tabular-nums">{{#if price}}{{kz price}}{{else}}<span class="font-normal text-ink-mute">Sem preço</span>{{/if}}</span>
 {{#if on_promo}}<span class="block text-xs text-ink-mute line-through tabular-nums">{{kz list_price}}</span>{{/if}}
